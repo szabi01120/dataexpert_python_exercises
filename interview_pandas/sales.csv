@@ -1,0 +1,7 @@
+TransactionID,EmployeeID,Product,Revenue,Profit
+1,1051,Product A,15000,3000
+2,1054,Product B,20000,5000
+3,1046,Product C,25000,7000
+4,1061,Product D,30000,10000
+5,1060,Product E,12000,2500
+5,1060,Product F,12000,2500

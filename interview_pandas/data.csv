@@ -1,0 +1,71 @@
+,Date,Category,Deal_Size,Revenue,Profit,Discount,Employee_ID,Region,Sector,Department,City
+0,2022-01-01,Technology,Large,5758.82,655.46,16.6,1051,Region 2,Sector 1,Sales,City 3
+1,2022-01-02,Office Supplies,Medium,10482.44,1916.2,19.61,1038,Region 4,Sector 3,Finance,City 5
+2,2022-01-03,Technology,Small,5249.42,797.82,17.93,1089,Region 4,Sector 3,Marketing,City 5
+3,2022-01-04,Office Supplies,Small,8461.14,1001.96,16.71,1074,Region 3,Sector 4,Sales,City 4
+4,2022-01-05,Office Supplies,Medium,16473.68,2018.21,19.78,1098,Region 4,Sector 1,Finance,City 2
+5,2022-01-06,Furniture,Large,19161.85,3225.15,16.3,1087,Region 1,Sector 4,Sales,City 5
+6,2022-01-07,Technology,Medium,16249.99,1371.76,5.06,1096,Region 4,Sector 3,Marketing,City 4
+7,2022-01-08,Furniture,Medium,10091.06,1837.02,9.04,1083,Region 5,Sector 4,Finance,City 2
+8,2022-01-09,Technology,Medium,12343.23,1197.96,11.16,1026,Region 2,Sector 1,Marketing,City 4
+9,2022-01-10,Technology,Small,10084.78,1952.59,11.42,1078,Region 3,Sector 1,HR,City 4
+10,2022-01-11,Technology,Small,7692.35,928.95,9.47,1032,Region 5,Sector 3,Sales,City 3
+11,2022-01-12,Furniture,Small,7564.8,1185.69,11.02,1070,Region 4,Sector 1,Sales,City 1
+12,2022-01-13,Office Supplies,Medium,11951.76,873.13,6.81,1097,Region 5,Sector 3,Finance,City 2
+13,2022-01-14,Furniture,Large,,2891.12,19.71,1044,Region 5,Sector 4,Finance,City 1
+14,2022-01-15,Furniture,Medium,19161.8,2815.63,11.09,1059,Region 5,Sector 3,HR,City 2
+15,2022-01-16,Technology,Medium,14123.79,1161.43,13.54,1057,Region 4,Sector 3,Finance,City 2
+16,2022-01-17,Office Supplies,Small,13949.83,1087.65,10.15,1050,Region 5,Sector 4,Sales,City 5
+17,2022-01-18,Office Supplies,Small,16754.66,2867.34,16.83,1045,Region 5,Sector 1,Marketing,City 3
+18,2022-01-19,Office Supplies,Medium,12500.39,2025.84,11.17,1004,Region 5,Sector 1,Finance,City 3
+19,2022-01-20,Office Supplies,Large,5755.55,870.4,10.39,1057,Region 1,Sector 1,HR,City 4
+20,2022-01-21,Technology,Small,15486.47,,10.99,1093,Region 5,Sector 2,Marketing,City 1
+21,2022-01-22,Office Supplies,Large,19885.95,1516.03,9.53,1091,Region 4,Sector 3,Sales,City 4
+22,2022-01-23,Technology,Large,,,16.63,1017,Region 3,Sector 1,Finance,City 3
+23,2022-01-24,Technology,Medium,15186.36,1814.35,18.89,1035,Region 1,Sector 2,HR,City 4
+24,2022-01-25,Office Supplies,Medium,17964.22,3162.86,9.88,1066,Region 2,Sector 3,Finance,City 3
+25,2022-01-26,Furniture,Medium,16262.66,1312.88,19.29,1020,Region 2,Sector 4,Sales,City 3
+26,2022-01-27,Technology,Large,19467.35,1455.06,5.21,1045,Region 4,Sector 3,Finance,City 2
+27,2022-01-28,Furniture,Small,13313.64,914.98,13,1057,Region 1,Sector 3,Sales,City 4
+28,2022-01-29,Technology,Small,8185.86,1295.92,9.57,1079,Region 1,Sector 4,HR,City 2
+29,2022-01-30,Office Supplies,Medium,8336.65,454.91,18.24,1036,Region 2,Sector 2,HR,City 4
+30,2022-01-31,Office Supplies,Small,8281.24,1341.97,8.76,1062,Region 3,Sector 1,Sales,City 3
+31,2022-02-01,Furniture,Large,13543.6,865.29,15.16,1004,Region 5,Sector 1,HR,City 3
+32,2022-02-02,Technology,Large,11781.64,973.37,17.16,1077,Region 3,Sector 1,Finance,City 5
+33,2022-02-03,Office Supplies,Small,19553.55,3175.27,11.48,1030,Region 1,Sector 4,HR,City 2
+34,2022-02-04,Office Supplies,Large,15208.17,2429.57,16.28,1087,Region 4,Sector 4,Marketing,City 1
+35,2022-02-05,Office Supplies,Large,6279.43,356.94,17.44,1098,Region 3,Sector 1,Sales,City 4
+36,2022-02-06,Technology,Large,5846.27,475.73,10.69,1035,Region 3,Sector 3,Finance,City 1
+37,2022-02-07,Furniture,Medium,12317.57,1145.99,6.45,1073,Region 1,Sector 3,HR,City 5
+38,2022-02-08,Technology,Medium,18215.07,2761.21,8.84,1090,Region 2,Sector 1,Finance,City 3
+39,2022-02-09,Furniture,Small,19646.07,1168.07,13.88,1055,Region 1,Sector 1,Marketing,City 2
+40,2022-02-10,Furniture,Small,14264.87,1902.18,12.15,1026,Region 3,Sector 4,HR,City 1
+41,2022-02-11,Technology,Small,13137.48,675.08,12.32,1022,Region 3,Sector 1,HR,City 2
+42,2022-02-12,Furniture,Large,17819.2,3117.57,11.88,1076,Region 4,Sector 2,Sales,City 3
+43,2022-02-13,Technology,Large,16157.52,3193.52,12.87,1079,Region 3,Sector 3,HR,City 2
+44,2022-02-14,Technology,Medium,12178.94,1894.12,11.63,1098,Region 4,Sector 1,Sales,City 2
+45,2022-02-15,Technology,Medium,15156.22,1170.74,17.79,1090,Region 3,Sector 1,HR,City 4
+46,2022-02-16,Office Supplies,Small,14105.68,1789.43,11.5,1051,Region 2,Sector 4,Finance,City 1
+47,2022-02-17,Office Supplies,Small,15720.45,2154.76,17.4,1046,Region 3,Sector 2,Marketing,City 5
+48,2022-02-18,Furniture,Large,12042.46,2024.71,12.64,1080,Region 4,Sector 4,Marketing,City 2
+49,2022-02-19,Technology,Medium,11840.22,1669.13,6.3,1061,Region 4,Sector 1,HR,City 2
+50,2022-02-20,Technology,Medium,18596.27,1539.04,14.9,1060,Region 4,Sector 3,Finance,City 5
+51,2022-02-21,Office Supplies,Large,7058.31,834.82,8.1,1047,Region 3,Sector 2,Sales,City 1
+52,2022-02-22,Technology,Small,8438.29,1534.34,17.71,1000,Region 4,Sector 2,Marketing,City 3
+53,2022-02-23,Office Supplies,Medium,18223.78,2256.84,15.22,1010,Region 5,Sector 2,Marketing,City 4
+54,2022-02-24,Furniture,Medium,18566.37,2921.12,7.68,1075,Region 2,Sector 4,HR,City 5
+55,2022-02-25,Furniture,Medium,14686.77,1805.36,6.05,1013,Region 3,Sector 1,Finance,City 2
+56,2022-02-26,Technology,Medium,9870.24,1542.54,5.15,1071,Region 4,Sector 1,HR,City 3
+57,2022-02-27,Office Supplies,Medium,12795.67,1595.89,18.38,1094,Region 2,Sector 1,Finance,City 4
+58,2022-02-28,Office Supplies,Large,5000.83,883.56,7,1006,Region 3,Sector 2,HR,City 5
+59,2022-03-01,Office Supplies,Large,9677.9,766.02,16.69,1045,Region 2,Sector 2,Marketing,City 2
+60,2022-10-01,Office Supplies,Medium,10482.44,1916.2,19.61,1038,Region 4,Sector 3,Finance,City 5
+61,2022-10-11,Office Supplies,Small,16754.66,2867.34,16.83,1045,Region 5,Sector 1,Marketing,City 3
+62,2022-10-21,Furniture,Medium,12317.57,1145.99,6.45,1073,Region 1,Sector 3,HR,City 5
+63,2022-10-31,Technology,Small,10084.78,1952.59,11.42,1078,Region 3,Sector 1,HR,City 4
+64,2022-11-10,Furniture,Small,19646.07,1168.07,13.88,1055,Region 1,Sector 1,Marketing,City 2
+65,2022-11-20,Office Supplies,Small,19553.55,3175.27,11.48,1030,Region 1,Sector 4,HR,City 2
+66,2022-11-30,Technology,Small,15486.47,766.02,10.99,1093,Region 5,Sector 2,Marketing,City 1
+67,2022-12-10,Technology,Medium,18596.27,1539.04,14.9,1060,Region 4,Sector 3,Finance,City 5
+68,2022-12-20,Technology,Small,15486.47,2867.34,10.99,1093,Region 5,Sector 2,Marketing,City 1
+69,2022-12-31,Technology,Medium,14123.79,1161.43,13.54,1057,Region 4,Sector 3,Finance,City 2

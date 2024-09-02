@@ -1,0 +1,342 @@
+Fuvarozás mód
+Raklap összesítés
+Nettó mennyiség
+ETK, cikk név
+Lejárati dátum
+Magyarország
+Cikk név
+Szállítás módja
+Felrakodás helye
+Rendszám
+Vevő név
+Számla szám
+Cikk kód
+Hatóság módja
+Karton száma
+Nettó súly
+Konténerszám
+Tétel
+Konténer
+Készletmozgás biz. szám
+Gyártási dátum
+Szállítás dátuma
+Előre látható
+marha jó
+Lefárási szempontok
+szállítás
+Mégsem
+összes kijelölése
+Súly (kg)
+Üzem
+Frissítés
+Fő testtáj
+Átlag térfogat
+Állomány minősítés
+Egész csirke
+Hálózat státusza: 
+Számla aláírás és bélyegző nélkül érvényes.
+Dátum
+Gyártási lap
+Raktár
+Státusz frissítés
+  Címke darab:
+Pénzforgalmi jelzőszám
+Státusz lekérdezés
+Utolsó fázis
+Nyelv név
+Szöveg
+<font color=red><b>Leválasztva</b></font>
+Munkafüzet betöltése...
+Tetszőleges belső megjegyzés
+Pénznem: 
+Vonalkód
+Alapértelmezett számlázási pénznem
+<font color=green><b>Kapcsolódva</b></font>
+Mozgásnem név
+Kód
+Adatbázis session kapcsolat ellenőrzése
+Első fázis
+Második fázis
+érv.?
+Harmadik fázis
+Név
+Árukiísérő
+Megjegyzés
+Újracsatlakozás adatbázishoz
+Számlák
+Üzenet
+(*)A nyelv kódja
+Az "idézős" felirat
+Utolsó előtti fázis
+Aposztrófos' fázis
+Szerepkör felhasználói lekérdezés jogosultság
+Számla nyomtató: 
+ISO-639-1 kód
+Raktár kód
+Eleje/vége
+Telephely kód
+Bankszámla kód
+Bevételező mozgásnem név
+Címke
+Bevételező raktár név
+EKAER felhasználó
+Értékesítési szabály
+(*)[Felhasználó]->Elnevezés
+Automatikus frissítés
+Tevékenység sablon
+Törzskezelés szabály
+Felhasználó kód nyomtat
+Törzs státusz
+Csoportnév
+Jogcím kód
+Tevékenység sablon név
+Elsődleges telephely és raktár beállítás
+Törzs
+Rakodás alatt
+Küldszállítás
+Periódus: 
+Felhasználó kód
+Raktár:
+Felhasználó
+Rakodás státusz
+Vállalat felhasználó
+Beállítások megjelenítése
+Módosít
+Törlés
+Feltölt
+Kilépés
+Vonalkód:
+Elnevezés
+Pénzmozgás szabály
+Automatikus feltöltés?
+A módosítások a következő bejelentkezéskor lépnek életbe.
+A séma neve
+Tárolt eljárások
+A tárolt eljárás neve
+A visszatérési érték típusa
+(*)A lefordítandó szöveg
+Nyelv kód
+A formális paraméter lista
+(*)[Nyelv]->A nyelv kódja
+Séma
+Típus
+Paraméter
+Vonalkód: -
+Kamerakép
+Vonalkód+kép
+Törzs indítható?
+(*)Kód
+Illetékesség
+Készletszint feltöltési szabály név
+Elsődleges üzem név
+Készletszint feltöltési szabály kód
+Elsődleges üzem kód
+Vállalat szervezet
+Vállalat kód
+Gyártmánylap jóváhagyás kezdő dátum
+Vállalat név
+Szerepkörök és készletmozgás jogok másolása
+Leírás
+Szerepkör felhasználók
+Elsődleges telephely: 
+Törzs bizonylatszám
+Telepítés
+Ország név
+Kijelölt darab (gyűjtő?)
+Csak élő tervek? 
+Beszerzési összesítés
+  Készletszintenként
+Nyomtatandó darab (gyűjtő?)
+Újratervezés
+Mennyiség
+Nyomtatás cikkenként
+Kijelölt hatáskör
+Nyomtatás törzsönként - lapváltás törzsönként?
+Elérhetőség
+Áru kód
+Mennyiség kijelölt
+ Hiányra szállítás? 
+1. Törzs - gyűjtési pontok
+Helyettesített cikk egységár/kg
+Egységár/kg eltérés
+Helyettesítő cikk egységár
+Egységár/kg eltérés %
+Helyettesítő cikk kód
+Helyettesített cikk ETK
+Fix főkönyvi számla kód
+Tárgyi eszköz csoport
+ Főkönyvi kategória kód szállító: 
+E. csoport név
+ Dátum navigálás előszállítókat frissítő  
+ Táblázatban a rendeltek megjelenjenek? 
+Elsődleges telephely
+Áthelyezés készletmozgás nélkül
+Cross-docking továbbitási cégre vonatkozó szállítási dátum
+Bruttó érték
+Raklap mérés
+Kijelölt törzsre - tárhelyeken
+(*)A telephely vállalaton belüli egyedi kódja
+Kiemelt kezelés?
+ Telepítés: 
+Raklap összesítő nyomtatás - kiválasztott
+Komissiós lista nyomtatás beállítása
+Össz. súly (kg):
+Visszáru ok kód
+Egyéb adatok:
+F. Hataridő:
+Nyomtatás előtt módosítható?: 
+0001I, Külföldre eladás kitárolássalI
+Fuvarkedvezmény kalkulálandó?: 
+Adó Érték
+Alap egységár:
+Hónap
+Telepítés:
+Beállítások
+Rendszám:
+Visszáru darab (gyűjtő)
+Számla kelte
+Fizetési határidő
+Termény vásárlás prioritás: 
+Termény vásárlás ár típusa: 
+Generált cím: 
+ Igazolt szállítólevél átadás?
+Érv. vége
+Készletszint név: 
+(*)[Melyik telepítésen található a telephely.]->Az ország egyedi neve
+Éjfél utáni átrak száma
+Árukísérő adattartalom: 
+Adó Árfolyam típus kód
+Termény vásárlás pénznem: 
+Beszerzés Árfolyam típus kód
+Készlet sorrend
+Vágóhíd?
+Munkalap főkönyvi napló: 
+Lépcsőház: 
+ENAR azonosító
+Rövid név
+Ir. szám: 
+Főkönyvi bizonylat határnap: 
+Érték
+Adó Árfolyam típus:
+Offline tikett típusa
+Számla jogcím név
+Ár típus név
+Partner típus
+Paritás: 
+Bolti terhelés jogcím:
+Árfolyam típus kód
+Ajtó: 
+Határnapok
+Tételképzési mód(termelési): 
+Készlet feladás főkönyvi napló: 
+Érvényesség vége
+Adó kulcs
+ Csak szállítólevél kezelés?
+Árfolyam típus időszak
+Árfolyamok
+Költséghely: 
+Pénztár főkönyvi napló: 
+Bank főkönyvi napló:
+Székhely cím
+Fordított ÁFA szabály
+Partner típus név
+Csoport azonosító szám: 
+Épület: 
+Tételképzési mód(szállítói): 
+Tárgyi eszköz főkönyvi napló:
+Pénzmozgás Árfolyam típus:
+Induló forduló: 
+Árfolyam típus név
+Üzem: 
+Érvényesség kezdete
+Mennyiségi egység kód: 
+Árukísérő kiszolgálás?
+Szállításszervezés átadás?
+Kompenzáció főkönyvi napló: 
+Egyszerre mozgatható maximális mennyiség: 
+Értékesítés árfolyam típusa név
+Telepítés: 
+Min. rendelési érték: 
+Késedelmi kamat típusa:
+Adószám: 
+Közigazgatási adószám: 
+Számláz?
+Szállítói megrendelés határnap: 
+Adóhatósági ellenőrzési adatszolgáltatás
+Pénzmozgás árfolyam típusa név
+Székhely cím: 
+Felvásárlás fizetési határnapok: 
+Működés
+Zárul forduló: 
+Felvásárlás fizetési mód:
+Beszerzés árfolyam típusa:
+FELIR azonosító: 
+Főkönyv
+Készlet jelleg: 
+Érv.kezdete
+Értékesítés árfolyam típusa:
+Értékesítés árfolyam típusa kód
+Alapértelmezett leltár mennyiség jelleg: 
+Számla befogadás határnap: 
+Vállalat
+Beszerzés árfolyam típusa név
+Ország kód
+Adó árfolyam típusa név
+Fizetési mód: 
+Vevői megrendelés határnap: 
+Számlakibocsátás határnap: 
+Készletforgalom határnap: 
+Vállalat árfolyam
+Irányítószám
+Beérkező számla feladás főkönyvi napló:
+Pénzmozgás árfolyam típusa kód
+Működési/engedélyszám: 
+Raktári kiszolgálás?
+Hatáskör
+Számla feladás főkönyvi napló:
+Házszám: 
+Gyártás típusa: 
+(*)A vállalat egyedi kódja
+Társra zsilip kitöltési mód
+Cím név
+Cím
+Ártípus kód
+Betárolási javaslat?
+Terméktanács azonosító
+Szállítólevél raktáronként?
+Cím kód
+Számla jogcím
+Partner kód
+Sarzs kód szegmens
+KTJ (Környezetvédelmi Területi Jel)
+Kereső név
+Partner név
+Saját bolt munkaszám
+Raktári műszak követés?
+Saját bolt munkaszám név
+Társra indítás mód
+(*)[Vállalat]->A vállalat egyedi kódja
+Vevő?
+[Saját bolt munkaszám]->Sarzs kód szegmens
+[Saját bolt munkaszám]->Elnevezés
+Automatikus feltöltő  
+Értékcsökkenés kezdete
+Generálás
+ÁFA kulcs név
+Tervezet generálás
+Évek száma
+Gyáriszám
+Értékcsökkenés kulcs
+Eszközszám
+Értékcsökkenés tervezet
+ÁFA kulcs kód
+ÁFA érték
+Státusz
+Értékcsökkenés tervezet tétel
+Fejlesztési tartalék
+Értékelés név
+Alszám
+ÁFA számítási módszer
+Újra generálás
+Maradvány érték
+Értékelés kód

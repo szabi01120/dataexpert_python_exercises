@@ -1,0 +1,9 @@
+ScoreType,RankingWeight,Rules
+Participation,0,
+Abort,-10,
+Kills,1,
+Deaths,-2,
+Wins,100,
+Combos,10,
+Frags,5,
+Steps,0,

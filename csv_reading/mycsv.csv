@@ -1,0 +1,960 @@
+Lefordítandó szöveg,Lefordított szöveg,Text to be translated
+Fuvarozás mód,Mode of forwarding nxx,Mode of transport
+Darab,Piece,Piece
+DÍJBEKÉRO,PROFORMA INVOICE,AWARD REQUEST
+Név,Name,Name
+Sarzs,[ Batch],Batch
+Raklap összesítés,RLP sum eng,Pallet summary
+Nettó mennyiség,Net weight,Net quantity
+"ETK, cikk név",Item,"""ETK, article name"""
+Lejárati dátum,Best before,Expiration date
+Magyarország,Hungary,Hungary
+Fagyos,frozen,It's freezing
+Elohutött,fresh,He was cold
+Cikk név,Product name,Article name
+Szállítás módja,MODE OF TRANSPORT,Shipping method
+Szállítás dátuma,DATE D'EXPEDITION,Delivery date
+Felrakodás helye,LIEU D’EXPEDITION,Place of loading
+Rendszám,CAMION NR,License plate number
+Vevo név,CUSTOMER NAME,Vevo name
+Számla szám,INVOICE NO,Account number
+Raklap,Palette Nr,Pallet
+Cikk kód,Item number,Article code
+Hutés módja,Type of cooling,Cool way
+Karton száma,number of cartons,Carton number
+Nettó súly,net weight,Net weight
+Konténerszám,CONTAINER NR,Container number
+Tétel,Batch,Item
+Konténer,CONTAINER,Container
+Készletmozgás biz.szám,No.,Stock movement biz. no
+Gyártás dátum,Production date,Production date
+megjegyzes,note,comment
+marha jó,cow good,it's good
+Lefúrási szempontok,Drilling considerations,Drilling considerations
+szurése,filtering,piercing
+Mégsem,Cancel,Not yet
+Összes kijelölése,Select all,Select all
+Telephely,Location,Site
+Súly (kg),Weight (kg),Weight (kg)
+Igen,Yes,Yes
+Nem,No,No
+Üzem,Factory,Plant
+Frissítés,Refresh,Update
+Fo testtáj,Main body part,Fo body landscape
+Utihulla,Roaddeath,Utihulla
+Átlagtömeg,Average weight,Average weight
+Állomány minosítés,ENG- Állomány minosítés,Stock rating
+Egész csirke,Whole chicken,Whole chicken
+CSIRKE,CHICKEN,CHICKEN
+Számla aláírás és bélyegzo nélkül érvényes.,The invoice is valid without sign and without stamp. Again: the invoice is valid without sign and without stamp,Invoice is valid without signature and stamp.
+Adatok,Datas,Data
+Dátum,Date,Date
+Gyártási lap,Production sheet,Production sheet
+Mutat,Show,Shows
+Raktár,Store,Storage
+Megjegyzés,Comment,Comment
+Szöveg,Text,Text
+Nyelv név,Language name,Language name
+Kód,Code,Mist
+Érv.?,Valid?,Argument.?
+Vonalkód,Barcode,Bar code
+Hálózat státusza: ,Net status: ,Network status:
+<font color=green><b>Kapcsolódva</b></font>,<font color=green><b>Connected</b></font>,<font color=green><b>Connected</b></font>
+Státusz frissítés,Refresh status,Status update
+Státusz lekérdezés,Query status,Status query
+<font color=red><b>Leválasztva</b></font>,<font color=red><b>Disconnected</b></font>,<font color=red><b>Disconnected</b></font>
+Tetszoleges belso megjegyzés,Any internal comment,Any internal comment
+Pénznem: ,Currency:,Currency:
+Alapértelmezett számlázási pénznem,Default Invoice currency,Default billing currency
+Nyelv,Language,Language
+Gombok,Buttons,Buttons
+"Adatbázis session
+kapcsolat ellenorzése","Database session
+connection check","""Database session"
+"Újracsatlakozás
+adatbázishoz","Reconnect
+to database","check connection"""
+Elso fül,First tab,"""Reconnect"
+Második fül,Second tab,"to database"""
+Harmadik fül,Third tab,First ear
+Utolsó fül,[Last tab'],Second ear
+Munkafüzet betöltése...,[Loading workbook ...],Third ear
+Település,[ City ],Last ear
+Ország név,[ Country name ],Loading workbook...
+Skontó (%),[Discount (%)],Settlement
+ Táblázatban a rendeltek megjelenjenek? ,[Should the orders appear in a table? ],Country name
+Felhasználó kód,[ User code ],Discount (%)
+Munkaszám név,[Work number name],Should the orders appear in a table?
+Mennyiség,[ Quantity ],User code
+M.e.,[ M.e. ],Work number name
+Pénznem név,[ Currency name ],Quantity
+Ügynök kód,[Agent code],AD
+Múlt év,[Last year],Currency name
+Partner típus,[Partner Type ],Agent code
+Hivatkozás,[Link],Last year
+Fizetési mód név,[Payment method name],Partner type
+Egyéb adatok,[Other data[ ],Reference
+Múlt hónap,[Last month],Payment method name
+Év,[ Year ],Other data
+Státusz,[ Status ],Last month
+Ügynök név,[Agent name],Year
+Partner típus név,[ Partner type name [ ],Status
+  Készültség: ,[Preparation: ],Agent name
+Hónap,[ Month ],Partner type name
+IBAN,[ ],Preparedness:
+Nap,[ Day],Month
+Ma,[Ma],IBAN
+Szállítási cím,Delivery adress,Day
+Érvényesítés,[ ],Today
+(*)A lefordítandó szöveg,[ (*) Text to be translated ],Delivery Address
+Bankszámla kód,[Bank account code ],Validation
+Biz.szám,[Receipt number],(*)The text to be translated
+Áru kód,[ Commodity code ],Bank account code
+Leírás,[ Description ],Business no
+Cím név,[ Address name ],Product code
+Alapadatok,[ Basic data ],Description
+Cím,[ Address ],Address name
+"Alap
+egységár",[Fund\n],Basic data
+Nyelv kód,[ Language code ],Title
+Darab (gyujto),[Piece (collective)],"""Basis"
+Bejelento adószáma,[Declarant's tax number],"unit price"""
+Szint: ,[Level: ],Language code
+Termény vásárlás prioritás: ,[ Crop purchase priority: ],piece
+Termény vásárlás ártípus: ,[ Crop purchase price type: ],Your declared tax number
+Generált cím: ,[ Generated address: ],Level:
+ Igazolt szállítólevél átadás?,[ Certified delivery note transfer ],Product purchase priority:
+Érv.vége,[ Argument end ],Product purchase price type:
+Közterület név: ,[ Public area name: ],Generated address:
+Árukíséro adattartalom: ,[ Accompanying data content: ],Delivery of a certified delivery note?
+"Adó árfolyam
+típus kód",[ Tax rate\n],End of argument
+Termény vásárlás pénznem: ,[Crop purchase currency: ],Public space name:
+"Beszerzés árfolyam
+típus kód",[ Purchase rate\n],Accompanying data content:
+Munkalap fokönyvi napló: ,[Worksheet ledger: ],"""Tax rate"
+Lépcsoház: ,[ Staircase: ],"type code"""
+Rövid név,[ Short name ],Product purchase currency:
+Fokönyvi bizonylat határnap: ,[ General ledger deadline: ],"""Purchase rate"
+Érték,[ Value ],"type code"""
+Adó árfolyam típus:,[ Tax rate type: ],Worksheet log book:
+Bolti terhelés jogcím:,[ Store Debit Item: ],Staircase:
+Árfolyam típus kód,[ Exchange Rate Type Code ],Short name
+Ajtó: ,[ Door: ],Deadline for degree certificate:
+Határnapok,[ Deadlines ],Value
+Tételképzési mód(termelési): ,[ Item Formation (Production): ],Tax rate type:
+Készlet feladás fokönyvi napló: ,[ Stock Posting General Ledger: ],Store debit title:
+"Érvényesség
+vége",[ Validity\n],Exchange rate type code
+Adó kulcs,[Tax rate ],Door:
+ Csak szállítólevél kezelés?,[ Delivery note handling only ],Deadlines
+Árfolyam típus idoszak,[ Exchange rate type period ],Lot formation method (production):
+Árfolyamok,[ Exchange rates ],Inventory posting ledger:
+Költséghely: ,[ Cost center: ],"""Validity"
+Pénztár fokönyvi napló: ,[ Cash register ledger: ],"over"""
+Bank fokönyvi napló:,[ Bank ledger: ],Tax key
+Székhely cím,[ Registered office address ],Only waybill handling?
+Fordított ÁFA szabály,[ Reverse VAT rule ],Exchange rate type period
+Csoport azonosító szám: ,[Group identification number: ],Exchange rates
+Épület: ,[ Building: ],Cost location:
+(*)A nyelv kódja,[(*) Language code],Cash register journal:
+Alternatív név,[Alternative name],Bank ledger:
+Címke,[ Label ],Headquarters address
+(*)Kód,[ (*) Code ],Reverse VAT rule
+Üzenet,Message,Group identification number:
+OK,OK ,Building:
+Elnevezés,Name ,(*)The code of the language
+Kilépés, Exit ,Alternative name
+Módosít, Change ,Label
+Feltölt, Upload ,(*)Mist
+Törlés, Delete ,Message
+Automatikus feltölt?, Auto-fill?,OK
+Partner név,[ Partner name ],Name
+Paraméter,Parameter ,Exit
+Email cím,[Email address ],It modifies
+Partner kód,[ Partner code ],Uploaded
+Egalizált mennyiségtol eltérhet?,[Can it differ from the equalized amount?],Deletion
+Felhasználó név,[ Username ],Automatic upload?
+Ország kód,[Country code ],Partner name
+Text típusú értékkészlet,[Text type value set],Parameter
+(*)Elnevezés,[ (*) Name ],E-mail address
+(*)[Vállalat]->A vállalat egyedi kódja,[(*) [Company] -\u003e Unique company code],Partner code
+Vállalat kód,[ Company code ],Can it differ from an equalized amount?
+Vállalat név,[ Company name],Username
+A sima felirat,['The plain caption],Country code
+"Az ""idézojeles"" felirat",['The caption'],A set of values ​​of type Text
+Utolsó elotti fül,[Last penultimate tab],(*)Name
+Aposztrófos' fül,[Apostrophe' tab '],(*)[Company]->Unique code of the company
+"<font color=red><b>A piros, HTML felirat</b></font>","[The red, HTML caption]",Company code
+A pontozott... felirat,['The dotted ... caption],Company name
+ISO-639-1 kód,ISO-639-1 code,The plain inscription
+Vonalkód:, Barcode:,"""The """"in quotation marks"""" caption"""
+Raklap: ,[Pallet:],Penultimate ear
+Hova: , To: ,Apostrophe' ear
+A módosítások a következo bejelentkezéskor lépnek életbe.,[ Changes take effect the next time you log in. ],"""<font color=red><b>The red, HTML text</b></font>"""
+Típus, Type ,The dotted... caption
+Séma, Schema ,ISO-639-1 code
+A séma neve,[ Schema Name ],Bar code:
+Tárolt eljárások,[ Stored Procedures],Pallet:
+A tárolt eljárás neve,[Name of the stored procedure ],Where:
+A visszatérési érték típusa,[ Type of return value ],The changes will take effect at the next login.
+A formális paraméter lista,[ List of formal parameters],Type
+(*)[Nyelv]->A nyelv kódja,[(*) [Language] -\u003e Language code],Schema
+Kamerakép,Camera Image ,The name of the scheme
+Vonalkód: -,[ Barcode: - ],Stored Procedures
+Vonalkód+Kép, Barcode + Image,The name of the stored procedure
+Túra indítható?,[Can a tour be started?] ],The type of the return value
+Illetékesség,[ Jurisdiction],The formal parameter list
+Készletszint feltöltés szabály név,[Inventory level replenishment rule name ],(*)[Language]->The language code
+Elsodleges üzem név,[ Primary plant name ],Camera image
+Készletszint feltöltés szabály kód,[ Inventory level replenishment rule code ],Bar code: -
+Elsodleges üzem kód,[ Primary plant code ],Barcode+Image
+Vállalat szervezet,[ Company organization ],Can a tour be started?
+Gyártmánylap jóváhagyás kezdo dátum,[ Product sheet approval start date ],Jurisdiction
+Szervezet,[ Organization ],Inventory level upload rule name
+  Címke darab:,[Label pieces: ],Primary plant name
+Pénzforgalmi jelzoszám,[ Cash register ],Stock level upload rule code
+Sor,[ Line ],Primary plant code
+Mind,[ All ],Company organization
+Mozgásnem név,[ Movement name ],Manufacturer approval start date
+Árukíséro?,[ Accompanying? ],Organization
+Számlák,[ Invoices ],Tag piece:
+Szerepkör felhasználói lekérdezés jogosultság,[ Role user query authority ],Payment code
+Számla nyomtató: ,[ Invoice printer: ],Beer
+Raktár kód,[ Warehouse code ],All
+Eleje/vége,[ Start / end ],Movement gender name
+Telephely kód,[ Location code],Cargo escort?
+Bevételezo mozgásnem név,[ Receiving movement name ],Bills
+Bevételezo raktár név,[ Receiving warehouse name ],Role user query privilege
+EKAER felhasználó,[ EKAER user ],Invoice printer:
+Értékesítés szabály,[ Sales rule ],Warehouse code
+Sor - Oszlop csere (I),[ Row - Column replacement (I) ],Start/end
+(*)[Felhasználó]->Elnevezés,[ (*) [User] -\u003e Name ],Location code
+Automatikus frissítés,[ Automatic update],Non-revenue movement name
+Tevékenység sablon,[Activity template ],Receiving warehouse name
+Túra kezelés szabály,[ Tour management rule ],EKAER user
+Felhasználó kód nyomtat,[ Print user code ],Sales rule
+Túra státusz,[ Tour status ],Row - Column replacement (I)
+Csoportnév,[ Group name ],(*)[User]->Name
+Jogcím kód,[ Title code ],Automatic update
+Kapujegy,[ Gate ticket ],Activity template
+ perc,[ minutes ],Tour management rule
+Tevékenység sablon név,[ Activity template name ],User code prints
+Elsodleges telephely és raktár beállítás,[ Primary location and warehouse setting ],Tour status
+Túra,[ Tour],Group name
+Rakodás alatt,[Loading ],Title code
+Kódszótár,[ Code dictionary ],Gate ticket
+Periódus: ,[ Period: ],minute
+Raktár:,[ Warehouse: ],Activity template name
+Felhasználó,[ User ],Primary site and warehouse setting
+Terem,[ Room ],Tour
+Rakodás státusz,[ Loading status ],Loading
+Vállalat felhasználó,[ Company user ],Code dictionary
+"Beállítások
+megjelenítése",[ Settings\n],Period:
+Pénzmozgás szabály,[ Cash flow rule ],Storage:
+Rakat,[ Stack ],User
+Szerepkörök és készletmozgás jogok másolása,[ Copy roles and inventory movement rights ],Room
+Szerepkör felhasználók,[ Role users ],Loading status
+Elsodleges telephely: ,[ Primary location: ],Company user
+Kapujegy?,[ Gate ticket?],"""Settings"
+Túra bizonylatszám,[Tour voucher number ],"display"""
+Kijelölt darab (gyujto),[ Designated piece (collector) ],Cash flow rule
+Csak élo tervek? ,[ Live plans only? ],Stack
+Böngészo,[Browser ],Copy roles and stock movement rights
+  Készültségenként,[ By power ],Role users
+Nyomtatandó darab (gyujto),[ Piece to be printed (collector) ],Primary location:
+Újratervezés,[ Redesign ],Gate ticket?
+"Nyomtatás
+cikkenként",[ Print\n],Tour receipt number
+Mind be,[All on ],Selected piece (gujto)
+Kijelölt hatókör,[ Selected scope ],Live plans only?
+Nyomtatás túránként - lapváltás túránként?,[ Print per tour - change pages per tour ],Browser
+Elérhetoség,[ Availability ],By device
+"Mennyiség
+kijelölt",[ Quantity\n],Piece to be printed (gujto)
+ Hiányra szurés? ,[Missing screening? ],Redesign
+"1. Túra -
+gyujtési pontok",[Tour 1 -\n],"""Printing"
+Pénznem,[Currency],"per article"""
+Számla kibocsátás mód,[Invoice issuance method],All in
+Pb. szám,[Pb. ],Designated scope
+Jutalék (%),[Commission (%)],Print per tour - page change per tour?
+Teljesítés vége,[End of execution],Availability
+Bruttó érték,[ Gross value ],"""Quantity"
+Tétel megjegyzés,[Item comment],"assigned"""
+Kelt,[Date],Missing it?
+Árfolyam,[ Exchange rate ],"""Tour 1 -"
+Fizetési mód kód,[Payment method code],"collection points"""
+Számla megjegyzés,[Account note],Currency
+Adó dátum,[Tax date],Invoice issuing method
+Rendezési mód: ,[Order method: ],Pb. number
+Kiállító,[Issuer],Commission (%)
+Számla kontír státusz,[Invoice account status],End of performance
+Teljesítés,[Execution],Gross value
+Kontírozás mód,[Ordering method],Item comment
+Pénznem kód,[ Currency code ],Dated
+Rendezetlen érték,[Unordered value],Exchange rate
+ETK,[ ETK ],Payment method code
+Partner: ,[ Partner: ],Invoice note
+(*)[Melyik településen található a telephely.]->Az ország egyedi neve,[ (*) [In which settlement is the site located ],Tax date
+Éjfél utáni órák száma,[Number of hours after midnight ],Order method:
+Készlet sorrend,[Inventory order ],Exhibitor
+Vágóhíd?,[ Slaughterhouse? ],Account counter status
+ENAR azonosító,[ ENAR ID ],Fulfillment
+Ir.szám: ,[ Registration number: ],Accounts Payable method
+Offline tikett típusa,[ Offline ticket type ],Currency code
+Számla jogcím név,[ Account title name ],Unordered value
+Ártípus név,[ Price type ],ETC
+Paritás: ,[ Parity: ],Partner:
+Tételképzési mód(szállítói): ,[ Item creation method (suppliers): ],(*)[In which settlement the site is located.]->Unique name of the country
+Tárgyi eszköz fokönyvi napló:,[ Tangible asset general ledger journal: ],Number of hours after midnight
+Pénzmozgás árfolyam típus:,[ Cash flow exchange rate type: ],Inventory order
+Induló forduló: ,[ Starting round: ],Slaughterhouse?
+Árfolyam típus név,[ Exchange rate type name ],ENAR identifier
+Üzem: ,[ Plant: ],Registration number:
+"Érvényesség
+kezdete",[ Validity\n],Offline ticket type
+Mennyiségi egység: ,[Quantity unit: ],Account title name
+ Árukiséro kiszolgálás?,[ Accompanying service? ],Price type name
+ Szállításszervezés átadás?,[ Delivery organization transfer? ],Parity:
+Kompenzáció fokönyvi napló: ,[ Compensation ledger log: ],Lot formation method (suppliers):
+ Egyszerre mozgatható maximális mennyiség: ,[ Maximum quantity that can be moved at one time: ],Tangible asset ledger:
+"Értékesítés árfolyam
+típus név",[ Sales rate\n],Currency exchange rate type:
+Település: ,[Town: ],Starting round:
+Min. rendelési érték: ,[ Min. ],Exchange rate type name
+Késedelmi kamat típus:,[Type of interest for late payment: ],Plant:
+Adószám: ,[ Tax number: ],"""Validity"
+Közösségi adószám: ,[ Community tax number: ],"beginning"""
+ Számláz?,[ Invoice?\n],Amount Units:
+Szállítói megrendeles határnap: ,[Supplier Order Deadline: ],Goods exchange service?
+Adóhatósági ellenorzési adatszolgáltatás,[ Tax Authority Audit Reporting ],Transport organization transfer?
+"Pénzmozgás árfolyam
+típus név",[ Cash Flow Rate\n],Compensation logbook:
+Székhely cím: ,[Headquarters Address: ],Maximum amount that can be moved at one time
+Felvásárlás fizetési hat. napok: ,[ Acquisition payment six. ],"""Sales rate"
+Muködés,[Operation ],"type name"""
+Záró forduló: ,[ Closing round: ],City:
+Felvásárlás fizetési mód:,[ Purchase payment method: ],Min. order value:
+Beszerzés árfolyam típus:,[ Purchase exchange rate type: ],Late interest type:
+FELIR azonosító: ,[ FELIR identifier: ],Tax number:
+Fokönyv,[ General ledger ],Public tax ID number:
+Közterület jelleg: ,[ Public area type: ],Are you billing?
+Érv.kezdete,[ Argument start ],Supplier order deadline:
+Értékesítés árfolyam típus:,[ Sales exchange rate type: ],Tax authority control data provision
+"Értékesítés árfolyam
+típus kód",[ Sales exchange rate\n],"""Cash flow rate"
+ Alapértelmezett leltár mennyiség jelleg: ,[Default Inventory Quantity Type: ],"type name"""
+Számla befogadás határnap: ,[ Invoice Receipt Deadline: ],Headquarters address:
+Vállalat,[ Company ],Acquisition payment six. days:
+"Beszerzés árfolyam
+típus név",[ Purchase Rate\n],Operation
+"Adó árfolyam
+típus név",[ Tax rate\n],Final round:
+Fizetési mód: ,[Payment method: ],Purchase payment method:
+Vevoi megrendelés határnap: ,[ Sales order deadline: ],Purchase rate type:
+Számlakiállítás határnap: ,[ Invoice delivery deadline: ],FELIR identifier:
+Készletforgalom határnap: ,[ Inventory turnover deadline: ],Ledger
+Vállalat árfolyam,[ Company exchange rate ],Nature of public space:
+Ir.szám,[ Registration number ],Beginning of argument
+Beérkezo számla feladás fok. napló:,[ Incoming invoice sending principal. ],Sales rate type:
+"Pénzmozgás árfolyam
+típus kód",[Cash flow exchange rate\n],"""Sales rate"
+Muködési/Jövedéki engedély szám: ,[Operating / Excise License Number: ],"type code"""
+ Raktári kiszolgálás?,[ Warehouse Service? ],Default inventory quantity nature:
+Hatókör,[ Scope ],Invoice acceptance deadline:
+Számla feladás fokönyvi napló:,[ Invoice Posting General Ledger: ],Company
+Házszám: ,[ House Number: ],"""Purchase rate"
+Gyártás típus: ,[ Production Type:],"type name"""
+(*)A vállalat egyedi kódja,[(*) Unique company code],"""Tax rate"
+Túra zsilip kitöltési mód,[Tour lock filling method ],"type name"""
+Ártípus kód,[ Price type code ],Payment:
+Betárolási javaslat?,[ Storage suggestion? ],Vevoi order deadline:
+Terméktanács azonosító,[ Product board ID ],Invoice issue deadline:
+Szállítólevél raktáranként?,[ Delivery note per warehouse? ],Stock turnover deadline:
+Cím kód,[Address code ],Company rate
+Számla jogcím,[ Account title ],Ir. no
+Sarzs kód szegmens,[ Batch code segment ],Incoming invoice posting degree. diary:
+KTJ (Környezetvédelmi Területi Jel),[ KTJ (Environmental Territorial Sign) ],"""Cash flow rate"
+Kereso név,[ Search name ],"type code"""
+Saját bolt munkaszám,[ Own shop number ],Operating/Excise license number:
+Raktári muszak követés?,[ Warehouse shift tracking? ],Warehouse service?
+Saját bolt munkaszám név,[ Own shop job number name ],Scope
+Túra indítás mód,[ ],Invoice posting log book:
+Vevo,[Customer ],House number:
+[Saját bolt munkaszám]->Sarzs kód szegmens,[ [Own store work number] -\u003e Batch code segment ],Production type:
+[Saját bolt munkaszám]->Elnevezés,[ [Own store work number] -\u003e Name],(*)Unique code of the company
+"Helyettesített cikk
+egységár/kg","[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Tour lock filling method
+"Egységár/kg
+eltérés","[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Price type code
+"Egységár/kg
+eltérés %","[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Storage proposal?
+"Helyettesíto
+cikk kód","[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Product council identifier
+"Helyettesített
+cikk ETK","[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Delivery note per warehouse?
+"Helyettesíto cikk
+egységár",[Replacement article\n],Address code
+QML,[QML],Account title
+  Automatikus feltölt?  ,[Auto upload?],Batch code segment
+Fix fokönyvi számla kód,[Fixed General Ledger Account Code ],KTJ (Environmental Protection Territorial Sign)
+Tárgyi eszköz csoport,[ Tangible Asset Group ],Search name
+ Fokönyvi kategória kód szuro: ,[ General Ledger Category Code Filter: ],Own shop work number
+E. csoport név,[ E. ],Warehouse tracking?
+ Dátum navigálás eloszuroket frissít?  ,[Update date navigation pre-filters? ],Own shop work number name
+Elsodleges telephely,[Primary site ],Tour start mode
+Áthelyezés készletmozgás nélkül,[ Relocation without stock movement ],Customer
+Cross-docking továbbító cégre vonatkozó szállítási dátum,[ Delivery date for cross-docking forwarding company ],[My shop job number]->Batch code segment
+Raklap mérés,[ Pallet measurement ],[My shop job number]->Name
+"Kijelölt
+ túrára - tárhelyeken",[ Selected\n ],"""Substituted article"
+(*)A telephely vállalaton belüli egyedi kódja,[(*) Site-specific unique code ],"unit price/kg"""
+Zsilip,[ Sluice ],"""Unit price/kg"
+Kiemelt kezelés?,[ Priority treatment? ],"discrepancy"""
+ Település: ,[ City: ],"""Unit price/kg"
+Raklap összesíto nyomtatás - kiválasztott,[ Pallet summary printing - selected ],"deviation %"""
+Cim: ,[ Address: ],"""Substitute"
+Komissiós lista nyomtatás beállítása,[ Commission list printing setting ],"article code"""
+Össz. súly (kg):,[ Total ],"""Substituted"
+Visszáru ok kód,[Return reason code ],"article ETK"""
+Egyéb adatok:,[ Other data: ],"""Substitute article"
+Cikk,[ Article ],"unit price"""
+F.Hatarido:,[ F.Date: ],QML
+Nyomtatás elott módosítható?: ,[ Can be changed before printing ?: ],Automatic upload?
+"0001I, Külföldre eladás kitárolássalI","[ 0001I, Sale abroad by checkoutI ]",Fixed degree book account code
+Fuvarkedvezmény kalkulálandó?: ,[ Freight discount to be calculated ?: ],Asset group
+"Adó
+érték",[ Tax\n],Gradebook category code filter:
+Alap egységár:,[Base unit price: ],E. group name
+Település:,[ City: ],Does it update date navigation preferences?
+Beállítások,[ Settings ],Primary site
+Rendszám:,[ License plate: ],Transfer without inventory movement
+"Visszáru
+darab (gyujto)",[ Return\n],Delivery date for cross-docking forwarding company
+Számla kelte,Creation date,Pallet measurement
+Fizetési határido,Day of payment,"""Designated"
+Készültség,[Production],"for a tour - at storage facilities"""
+Idoszak: ,[ Period: ],(*)Unique code of the site within the company
+Kidolgozás kód,[Elaboration code],Sluice
+Mozgásnem,[Type of movement],Priority treatment?
+Külso azonosító,[ External identifier ],City:
+Üzem név,[Plant name],Pallet aggregate printing - selected
+SWIFT Kód,[SWIFT Code],Title:
+Pénztár,[ Cash register ],Setting up the printing of the commission list
+Üzem kód,[Operation code],Total weight (kg):
+Készlet lekérdezés szabály,[Stock query rule],Return reason code
+Jogcím,[Legal title],Other data:
+Raktár név,[Warehouse name],Article
+Értékcsökkenés kezdete,[Start of depreciation ],F.Hatarido:
+Generálás,[ Generation ],Can it be changed before printing?:
+ÉCS kulcs név,[ ECS key name ],"""0001I, Sales abroad with pick-up"""
+Tervezet generálás,[ Draft generation ],Freight discount to be calculated?:
+Évek száma,[ Number of years ],"""Tax"
+Gyáriszám,[ Serial number ],"value"""
+Értékcsökkenés kulcs,[ Depreciation key ],Basic unit price:
+Eszközszám,[ Device number ],City:
+Értékcsökkenés tervezet,[ Depreciation draft ],Settings
+ÉCS kulcs kód,[ ECS key code ],License plate number:
+ÉCS érték,[ ECS value ],"""Return"
+Értékcsökkenés tervezet tétel,[ Depreciation draft item [ ],"piece (jujto)"""
+Fejlesztési tartalék,[Development reserve ],Invoice date
+E. értékelés név,[ E. ],Payment deadline
+Alszám,[Subheading ],Preparedness
+ÉCS számítás módszer,[ ECS calculation method ],Period:
+Újra generálás,[ Regeneration ],Development code
+Maradvány érték,[ Residual value ],No movement
+E. értékelés kód,[ E. ],External identifier
+Fuvarozás mód,Mode of forwarding nxx,Plant name
+Raklap összesítés,RLP sum eng,Swift code
+Nettó mennyiség,Net weight,Cash register
+"ETK, cikk név",Item,Plant code
+Lejárati dátum,Best before,Inventory query rule
+Magyarország,Hungary,Title
+Cikk név,Product name,Warehouse name
+Szállítás módja,MODE OF TRANSPORT,Start of depreciation
+Felrakodás helye,LIEU Dâ??EXPEDITION,Generation
+Rendszám,CAMION NR,ÉCS key name
+Vev? név,CUSTOMER NAME,Draft generation
+Számla szám,INVOICE NO,Number of years
+Cikk kód,Item number,Serial Number
+Hatóság módja,Type of cooling,Depreciation key
+Karton száma,number of cartons,Device number
+Nettó súly,net weight,Depreciation plan
+Konténerszám,CONTAINER NR,ÉCS key code
+Tétel,Batch,ECS value
+Konténer,CONTAINER,Depreciation draft item
+Készletmozgás biz. szám,No.,Development Reserve
+Gyártási dátum,Production date,E. assessment name
+Szállítás dátuma,DATE D'EXPEDITION,Subnumber
+El?re látható,fresh,ÉCS calculation method
+marha jó,cow good,Regeneration
+Lefárási szempontok,Drilling considerations,Residual value
+szállítás,filtering,E. evaluation code
+Mégsem,Cancel,Mode of transport
+összes kijelölése,Select all,Pallet summary
+Súly (kg),Weight (kg),Net quantity
+Üzem,Factory,"""ETK, article name"""
+Frissítés,Refresh,Expiration date
+F? testtáj,Main body part,Hungary
+Átlag térfogat,Average weight,Article name
+Állomány min?sítés,ENG- AllomAAny minL?sA­tAŠs,Shipping method
+Egész csirke,Whole chicken,Place of loading
+Hálózat státusza: ,Net status: ,License plate number
+Számla aláírás és bélyegz? nélkül érvényes.,The invoice is valid without sign and without stamp. Again: the invoice is valid without sign and without stamp,Buyer? name
+Dátum,Date,Account number
+Gyártási lap,Pro duction sheet,Article code
+Raktár,Store,Way of authority
+Státusz frissítés,Refresh status,Carton number
+  Címke darab:,[Label pieces: ],Net weight
+Pénzforgalmi jelz?szám,[ Cash register ],Container number
+Státusz lekérdezés,Query status,Item
+Utolsó fázis,[Last tab'],Container
+Nyelv név,Language name,Stock movement biz. song
+Szöveg,Text,Date of manufacture
+<font color=red><b>Leválasztva</b></font>,<font color=red><b>Disconnected</b></font>,Delivery date
+Munkafüzet betöltése...,[Loading workbook ...],It is foreseeable
+Tetsz?leges bels? megjegyzés,Any internal comment,it's good
+Pénznem: ,Currency:,Coverage considerations
+Vonalkód,Barcode,transport
+Alapértelmezett számlázási pénznem,Default Invoice currency,Not yet
+<font color=green><b>Kapcsolódva</b></font>,<font color=green><b>Connected</b></font>,select all
+Mozgásnem név,[ Movement name ],Weight (kg)
+Kód,Code,Plant
+Adatbázis session kapcsolat ellen?rzése,"Database session
+connection check",Update
+Els? fázis,First tab,F? body landscape
+Második fázis,Second tab,Average volume
+érv.?,Valid?,Stock qualification
+Harmadik fázis,Third tab,Whole chicken
+Név,Name,Network status:
+Árukiísér?,[ Accompanying? ],Invoice signature and stamp? valid without
+Megjegyzés,Comment,Date
+Újracsatlakozás adatbázishoz,"Reconnect
+to database",Production sheet
+Számlák,[ Invoices ],Storage
+Üzenet,Message,Status update
+(*)A nyelv kódja,[(*) Language code],Tag piece:
+"Az ""idéz?s"" felirat",['The caption'],Payment code number
+Utolsó el?tti fázis,[Last penultimate tab],Status query
+Aposztrófos' fázis,[Apostrophe' tab '],Last phase
+Szerepkör felhasználói lekérdezés jogosultság,[ Role user query authority ],Language name
+Számla nyomtató: ,[ Invoice printer: ],Text
+ISO-639-1 kód,ISO-639-1 code,<font color=red><b>Disconnected</b></font>
+Raktár kód,[ Warehouse code ],Loading workbook...
+Eleje/vége,[ Start / end ],Pleasant interior? comment
+Telephely kód,[ Location code],Currency:
+Bankszámla kód,[Bank account code ],Bar code
+Bevételez? mozgásnem név,[ Receiving movement name ],Default billing currency
+Címke,[ Label ],<font color=green><b>Connected</b></font>
+Bevételez? raktár név,[ Receiving warehouse name ],Movement gender name
+EKAER felhasználó,[ EKAER user ],Mist
+Értékesítési szabály,[ Sales rule ],Database session connection check
+(*)[Felhasználó]->Elnevezés,[ (*) [User] -\u003e Name ],First? phase
+Automatikus frissítés,[ Automatic update],Second phase
+Tevékenység sablon,[Activity template ],argument.?
+Törzskezelés szabály,[ Tour management rule ],Third phase
+Felhasználó kód nyomtat,[ Print user code ],Name
+Törzs státusz,[ Tour status ],Goods price?
+Csoportnév,[ Group name ],Comment
+Jogcím kód,[ Title code ],Reconnect to database
+Tevékenység sablon név,[ Activity template name ],Bills
+Els?dleges telephely és raktár beállítás,[ Primary location and warehouse setting ],Message
+Törzs,[ Tour],(*)The code of the language
+Rakodás alatt,[Loading ],"""The ""quote"" caption"""
+Küldszállítás,[ Code dictionary ],Penultimate phase
+Periódus: ,[ Period: ],Apostrophe' phase
+Felhasználó kód,[ User code ],Role user query privilege
+Raktár:,[ Warehouse: ],Invoice printer:
+Felhasználó,[ User ],ISO-639-1 code
+Rakodás státusz,[ Loading status ],Warehouse code
+Vállalat felhasználó,[ Company user ],Start/end
+Beállítások megjelenítése,[ Settings\n],Location code
+Módosít, Change ,Bank account code
+Törlés, Delete ,Are you making money? no movement noun
+Feltölt, Upload ,Label
+Kilépés, Exit ,Are you making money? warehouse name
+Vonalkód:, Barcode:,EKAER user
+Elnevezés,Name ,Sales rule
+Pénzmozgás szabály,[ Cash flow rule ],(*)[User]->Name
+Automatikus feltöltés?, Auto-fill?,Automatic update
+A módosítások a következ? bejelentkezéskor lépnek életbe.,[ Changes take effect the next time you log in. ],Activity template
+A séma neve,[ Schema Name ],Trunk management rule
+Tárolt eljárások,[ Stored Procedures],User code prints
+A tárolt eljárás neve,[Name of the stored procedure ],Tribe status
+A visszatérési érték típusa,[ Type of return value ],Group name
+(*)A lefordítandó szöveg,[ (*) Text to be translated ],Title code
+Nyelv kód,[ Language code ],Activity template name
+A formális paraméter lista,[ List of formal parameters],Primary site and warehouse setting
+(*)[Nyelv]->A nyelv kódja,[(*) [Language] -\u003e Language code],Tribe
+Séma, Schema ,Loading
+Típus, Type ,Courier delivery
+Paraméter,Parameter ,Period:
+Vonalkód: -,[ Barcode: - ],User code
+Kamerakép,Camera Image ,Storage:
+Vonalkód+kép, Barcode + Image,User
+Törzs indítható?,[Can a tour be started?] ],Loading status
+(*)Kód,[ (*) Code ],Company user
+Illetékesség,[ Jurisdiction],Show settings
+Készletszint feltöltési szabály név,[Inventory level replenishment rule name ],It modifies
+Els?dleges üzem név,[ Primary plant name ],Deletion
+Készletszint feltöltési szabály kód,[ Inventory level replenishment rule code ],Uploaded
+Els?dleges üzem kód,[ Primary plant code ],Exit
+Vállalat szervezet,[ Company organization ],Bar code:
+Vállalat kód,[ Company code ],Name
+Gyártmánylap jóváhagyás kezd? dátum,[ Product sheet approval start date ],Cash flow rule
+Vállalat név,[ Company name],Automatic upload?
+Szerepkörök és készletmozgás jogok másolása,[ Copy roles and inventory movement rights ],The amendments are the following? they take effect upon login.
+Leírás,[ Description ],The name of the scheme
+Szerepkör felhasználók,[ Role users ],Stored Procedures
+Els?dleges telephely: ,[ Primary location: ],The name of the stored procedure
+Törzs bizonylatszám,[Tour voucher number ],The type of the return value
+Telepítés,[ City ],(*)The text to be translated
+Ország név,[ Country name ],Language code
+Kijelölt darab (gy?jt??),[ Designated piece (collector) ],The formal parameter list
+Csak él? tervek? ,[ Live plans only? ],(*)[Language]->The language code
+Beszerzési összesítés,[Browser ],Schema
+  Készletszintenként,[ By power ],Type
+Nyomtatandó darab (gy?jt??),[ Piece to be printed (collector) ],Parameter
+Újratervezés,[ Redesign ],Bar code: -
+Mennyiség,[ Quantity ],Camera image
+Nyomtatás cikkenként,[ Print\n],Barcode+image
+Kijelölt hatáskör,[ Selected scope ],Can a tribe be started?
+Nyomtatás törzsönként - lapváltás törzsönként?,[ Print per tour - change pages per tour ],(*)Mist
+Elérhet?ség,[ Availability ],Jurisdiction
+Áru kód,[ Commodity code ],Inventory level upload rule name
+Mennyiség kijelölt,[ Quantity\n],Primary plant name
+ Hiányra szállítás? ,[Missing screening? ],Stock level upload rule code
+1. Törzs - gy?jtési pontok,[Tour 1 -\n],Primary plant code
+Helyettesített cikk egységár/kg,"[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Company organization
+Egységár/kg eltérés,"[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Company code
+Helyettesít? cikk egységár,[Replacement article\n],Product plate approval begins? date
+Egységár/kg eltérés %,"[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Company name
+Helyettesít? cikk kód,"[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Copy roles and stock movement rights
+Helyettesített cikk ETK,"[['NO_INTERNET_OR_URL_NOT_REACHABLE 1', '']]",Description
+Fix f?könyvi számla kód,[Fixed General Ledger Account Code ],Role users
+Tárgyi eszköz csoport,[ Tangible Asset Group ],Primary location:
+ F?könyvi kategória kód szállító: ,[ General Ledger Category Code Filter: ],Master document number
+E. csoport név,[ E. ],Installation
+ Dátum navigálás el?szállítókat frissít?  ,[Update date navigation pre-filters? ],Country name
+ Táblázatban a rendeltek megjelenjenek? ,[Should the orders appear in a table? ],Selected item (collect??)
+Els?dleges telephely,[Primary site ],Is he just alive? plans?
+Áthelyezés készletmozgás nélkül,[ Relocation without stock movement ],Purchase summary
+Cross-docking továbbitási cégre vonatkozó szállítási dátum,[ Delivery date for cross-docking forwarding company ],By stock level
+Bruttó érték,[ Gross value ],Piece to be printed (collect??)
+Raklap mérés,[ Pallet measurement ],Redesign
+Kijelölt törzsre - tárhelyeken,[ Selected\n ],Quantity
+(*)A telephely vállalaton belüli egyedi kódja,[(*) Site-specific unique code ],Print per article
+Kiemelt kezelés?,[ Priority treatment? ],Designated authority
+ Telepítés: ,[ City: ],Print per section - page change per section?
+Raklap összesít? nyomtatás - kiválasztott,[ Pallet summary printing - selected ],Accessibility
+Komissiós lista nyomtatás beállítása,[ Commission list printing setting ],Product code
+Össz. súly (kg):,[ Total ],Quantity selected
+Visszáru ok kód,[Return reason code ],Missing delivery?
+Egyéb adatok:,[ Other data: ],1. Trunk - collection points
+F. Hatarid?:,[ F.Date: ],Substituted item unit price/kg
+Nyomtatás el?tt módosítható?: ,[ Can be changed before printing ?: ],Unit price/kg difference
+"0001I, Külföldre eladás kitárolássalI","[ 0001I, Sale abroad by checkoutI ]",Substitute? item unit price
+Fuvarkedvezmény kalkulálandó?: ,[ Freight discount to be calculated ?: ],Unit price/kg difference %
+Adó Érték,[ Tax\n],Substitute? article code
+Alap egységár:,[Base unit price: ],Substituted article ETK
+Hónap,[ Month ],Fixed ledger account code
+Telepítés:,[ City: ],Asset group
+Beállítások,[ Settings ],General ledger category code supplier:
+Rendszám:,[ License plate: ],E. group name
+Visszáru darab (gy?jt?),[ Return\n],Date navigation updates suppliers?
+Számla kelte,Creation date,Should the orders appear in a table?
+Fizetési határid?,Day of payment,Primary location
+Termény vásárlás prioritás: ,[ Crop purchase priority: ],Transfer without inventory movement
+Termény vásárlás ár típusa: ,[ Crop purchase price type: ],Delivery date for cross-docking forwarding company
+Generált cím: ,[ Generated address: ],Gross value
+ Igazolt szállítólevél átadás?,[ Certified delivery note transfer ],Pallet measurement
+Érv. vége,[ Argument end ],For a designated tribe - in storage areas
+Készletszint név: ,[ Public area name: ],(*)Unique code of the site within the company
+(*)[Melyik telepítésen található a telephely.]->Az ország egyedi neve,[ (*) [In which settlement is the site located ],Priority treatment?
+Éjfél utáni átrak száma,[Number of hours after midnight ],Installation:
+Árukísér? adattartalom: ,[ Accompanying data content: ],Pallet aggregate? print - selected
+Adó Árfolyam típus kód,[ Tax rate\n],Setting up the printing of the commission list
+Termény vásárlás pénznem: ,[Crop purchase currency: ],Total weight (kg):
+Beszerzés Árfolyam típus kód,[ Purchase rate\n],Return reason code
+Készlet sorrend,[Inventory order ],Other data:
+Vágóhíd?,[ Slaughterhouse? ],F. Your deadline?:
+Munkalap f?könyvi napló: ,[Worksheet ledger: ],Can it be changed before printing?:
+Lépcs?ház: ,[ Staircase: ],"""0001I, Sales abroad with pick-up"""
+ENAR azonosító,[ ENAR ID ],Freight discount to be calculated?:
+Rövid név,[ Short name ],Tax Value
+Ir. szám: ,[ Registration number: ],Basic unit price:
+F?könyvi bizonylat határnap: ,[ General ledger deadline: ],Month
+Érték,[ Value ],Installation:
+Adó Árfolyam típus:,[ Tax rate type: ],Settings
+Offline tikett típusa,[ Offline ticket type ],License plate number:
+Számla jogcím név,[ Account title name ],Return item (collect?)
+Ár típus név,[ Price type ],Invoice date
+Partner típus,[Partner Type ],Payment deadline?
+Paritás: ,[ Parity: ],Product purchase priority:
+Bolti terhelés jogcím:,[ Store Debit Item: ],Product purchase price type:
+Árfolyam típus kód,[ Exchange Rate Type Code ],Generated address:
+Ajtó: ,[ Door: ],Delivery of a certified delivery note?
+Határnapok,[ Deadlines ],Argument. it's over
+Tételképzési mód(termelési): ,[ Item Formation (Production): ],Stock Level Name:
+Készlet feladás f?könyvi napló: ,[ Stock Posting General Ledger: ],(*)[On which installation the site is located.]->Unique name of the country
+Érvényesség vége,[ Validity\n],Number of trips after midnight
+Adó kulcs,[Tax rate ],Accompanying goods? data content:
+ Csak szállítólevél kezelés?,[ Delivery note handling only ],Tax Rate type code
+Árfolyam típus id?szak,[ Exchange rate type period ],Product purchase currency:
+Árfolyamok,[ Exchange rates ],Purchase Exchange rate type code
+Költséghely: ,[ Cost center: ],Inventory order
+Pénztár f?könyvi napló: ,[ Cash register ledger: ],Slaughterhouse?
+Bank f?könyvi napló:,[ Bank ledger: ],Worksheet ledger journal:
+Székhely cím,[ Registered office address ],Staircase:
+Fordított ÁFA szabály,[ Reverse VAT rule ],ENAR identifier
+Partner típus név,[ Partner type name [ ],Short name
+Csoport azonosító szám: ,[Group identification number: ],Registration number:
+Épület: ,[ Building: ],Ledger receipt deadline:
+Tételképzési mód(szállítói): ,[ Item creation method (suppliers): ],Value
+Tárgyi eszköz f?könyvi napló:,[ Tangible asset general ledger journal: ],Tax Rate type:
+Pénzmozgás Árfolyam típus:,[ Cash flow exchange rate type: ],Offline ticket type
+Induló forduló: ,[ Starting round: ],Account title name
+Árfolyam típus név,[ Exchange rate type name ],Price type name
+Üzem: ,[ Plant: ],Partner type
+Érvényesség kezdete,[ Validity\n],Parity:
+Mennyiségi egység kód: ,[Quantity unit: ],Store debit title:
+Árukísér? kiszolgálás?,[ Accompanying service? ],Exchange rate type code
+Szállításszervezés átadás?,[ Delivery organization transfer? ],Door:
+Kompenzáció f?könyvi napló: ,[ Compensation ledger log: ],Deadlines
+Egyszerre mozgatható maximális mennyiség: ,[ Maximum quantity that can be moved at one time: ],Lot formation method (production):
+Értékesítés árfolyam típusa név,[ Sales rate\n],Inventory posting ledger journal:
+Telepítés: ,[Town: ],Expiration date
+Min. rendelési érték: ,[ Min. ],Tax key
+Késedelmi kamat típusa:,[Type of interest for late payment: ],Only waybill handling?
+Adószám: ,[ Tax number: ],Exchange rate type period
+Közigazgatási adószám: ,[ Community tax number: ],Exchange rates
+Számláz?,[ Invoice?\n],Cost location:
+Szállítói megrendelés határnap: ,[Supplier Order Deadline: ],Cash register journal:
+Adóhatósági ellen?rzési adatszolgáltatás,[ Tax Authority Audit Reporting ],Bank ledger journal:
+Pénzmozgás árfolyam típusa név,[ Cash Flow Rate\n],Headquarters address
+Székhely cím: ,[Headquarters Address: ],Reverse VAT rule
+Felvásárlás fizetési határnapok: ,[ Acquisition payment six. ],Partner type name
+M?ködés,[Operation ],Group identification number:
+Zárul forduló: ,[ Closing round: ],Building:
+Felvásárlás fizetési mód:,[ Purchase payment method: ],Lot formation method (suppliers):
+Beszerzés árfolyam típusa:,[ Purchase exchange rate type: ],Tangible asset ledger journal:
+FELIR azonosító: ,[ FELIR identifier: ],Money movement Exchange rate type:
+F?könyv,[ General ledger ],Starting round:
+Készlet jelleg: ,[ Public area type: ],Exchange rate type name
+Érv.kezdete,[ Argument start ],Plant:
+Értékesítés árfolyam típusa:,[ Sales exchange rate type: ],Start of validity
+Értékesítés árfolyam típusa kód,[ Sales exchange rate\n],Quantity unit code:
+Alapértelmezett leltár mennyiség jelleg: ,[Default Inventory Quantity Type: ],Accompanying goods? service?
+Számla befogadás határnap: ,[ Invoice Receipt Deadline: ],Transport organization transfer?
+Vállalat,[ Company ],Compensation ledger journal:
+Beszerzés árfolyam típusa név,[ Purchase Rate\n],Maximum quantity that can be moved at one time:
+Ország kód,[Country code ],Sales rate type name
+Adó árfolyam típusa név,[ Tax rate\n],Installation:
+Fizetési mód: ,[Payment method: ],Min. order value:
+Vev?i megrendelés határnap: ,[ Sales order deadline: ],Type of late interest:
+Számlakibocsátás határnap: ,[ Invoice delivery deadline: ],Tax number:
+Készletforgalom határnap: ,[ Inventory turnover deadline: ],Administrative tax number:
+Vállalat árfolyam,[ Company exchange rate ],Are you billing?
+Irányítószám,[ Registration number ],Supplier order deadline:
+Beérkez? számla feladás f?könyvi napló:,[ Incoming invoice sending principal. ],Tax authority control data provision
+Pénzmozgás árfolyam típusa kód,[Cash flow exchange rate\n],Currency exchange rate type name
+M?ködési/engedélyszám: ,[Operating / Excise License Number: ],Headquarters address:
+Raktári kiszolgálás?,[ Warehouse Service? ],Purchase payment deadlines:
+Hatáskör,[ Scope ],Operation
+Számla feladás f?könyvi napló:,[ Invoice Posting General Ledger: ],Final Round:
+Házszám: ,[ House Number: ],Purchase payment method:
+Gyártás típusa: ,[ Production Type:],Purchase rate type:
+(*)A vállalat egyedi kódja,[(*) Unique company code],FELIR identifier:
+Társra zsilip kitöltési mód,[Tour lock filling method ],General book
+Cím név,[ Address name ],Stock nature:
+Cím,[ Address ],Beginning of argument
+Ártípus kód,[ Price type code ],Sales rate type:
+Betárolási javaslat?,[ Storage suggestion? ],Sales rate type code
+Terméktanács azonosító,[ Product board ID ],Default inventory quantity nature:
+Szállítólevél raktáronként?,[ Delivery note per warehouse? ],Invoice acceptance deadline:
+Cím kód,[Address code ],Company
+Számla jogcím,[ Account title ],Purchase rate type name
+Partner kód,[ Partner code ],Country code
+Sarzs kód szegmens,[ Batch code segment ],Tax rate type name
+KTJ (Környezetvédelmi Területi Jel),[ KTJ (Environmental Territorial Sign) ],Payment:
+Keres? név,[ Search name ],Customer order deadline:
+Partner név,[ Partner name ],Deadline for invoice issuance:
+Saját bolt munkaszám,[ Own shop number ],Stock turnover deadline:
+Raktári m?szak követés?,[ Warehouse shift tracking? ],Company rate
+Saját bolt munkaszám név,[ Own shop job number name ],Postal code
+Társra indítás mód,[ ],Will you arrive? invoice posting ledger journal:
+(*)[Vállalat]->A vállalat egyedi kódja,[(*) [Company] -\u003e Unique company code],Currency exchange rate type code
+Vev??,[Customer ],Operation/license number:
+[Saját bolt munkaszám]->Sarzs kód szegmens,[ [Own store work number] -\u003e Batch code segment ],Warehouse service?
+[Saját bolt munkaszám]->Elnevezés,[ [Own store work number] -\u003e Name],Scope
+Automatikus feltölt?  ,[Auto upload?],Invoice posting ledger journal:
+Értékcsökkenés kezdete,[Start of depreciation ],House number:
+Generálás,[ Generation ],Production type:
+ÁFA kulcs név,[ ECS key name ],(*)Unique code of the company
+Tervezet generálás,[ Draft generation ],Companion sluice filling method
+Évek száma,[ Number of years ],Address name
+Gyáriszám,[ Serial number ],Title
+Értékcsökkenés kulcs,[ Depreciation key ],Price type code
+Eszközszám,[ Device number ],Storage proposal?
+Értékcsökkenés tervezet,[ Depreciation draft ],Product council identifier
+ÁFA kulcs kód,[ ECS key code ],Delivery note per warehouse?
+ÁFA érték,[ ECS value ],Address code
+Státusz,[ Status ],Account title
+Értékcsökkenés tervezet tétel,[ Depreciation draft item [ ],Partner code
+Fejlesztési tartalék,[Development reserve ],Batch code segment
+Értékelés név,[ E. ],KTJ (Environmental Protection Territorial Sign)
+Alszám,[Subheading ],Look for? name
+ÁFA számítási módszer,[ ECS calculation method ],Partner name
+Újra generálás,[ Regeneration ],Own shop work number
+Maradvány érték,[ Residual value ],Warehouse cycle tracking?
+Értékelés kód,[ E. ],Own shop work number name
+Üzem:,[ Plant: ],Co-launch mode
+Lefordítandó szöveg,[Text to translate ],(*)[Company]->Unique code of the company
+Lefordított szöveg,[ Translated text ],Buyer??
+Show Putty Registry,[ Show Putty Registry ],[My shop job number]->Batch code segment
+Log: ,[ Log: ],[My shop job number]->Name
+Login Putty,[Login Putty ],Automatic upload?
+Próbaszöveg,[ Sample text ],Start of depreciation
+vrtSplita,[ vrtSplita ],Generation
+downloadFile,[ downloadFile ],VAT key name
+Levonható adó érték,[Deductible tax value],Draft generation
+Termék,[Product],Number of years
+Fizetési mód,[Payment method],Serial Number
+Készletfajta,[Inventory type ],Depreciation key
+Adó árfolyam,[Tax rate],Device number
+A megengedett értékek listája,[List of allowed values],Depreciation plan
+Nyomtatás,[Print],VAT key code
+Munkaszám kód,[Job number code],VAT value
+Érvényesít,[ Validate ],Status
+Összesített értékek pénznemenként,[ ],Depreciation draft item
+Összes adó érték,[Total tax value],Development Reserve
+NAV státusz,[NAV status],Rating name
+Csekk példányszám,[Check number of copies],Subnumber
+ÁFA zárás dátum,[VAT closing date],VAT calculation method
+SWIFT kód,[SWIFT code],Regeneration
+Összes nettó érték,[Total Net Value],Residual value
+Közvetített biz. szám,[Intermediate biz. ],Evaluation code
+Számla fajta,[Account type],Plant:
+Kamat típus,[Interest type],Text to be translated
+Megrendelés,[Order],Translated text
+Folyamatos szolgáltatás?,[Continuous service?],Show Putty Registry
+Teljesítés kezdete,[Start of execution],Log:
+Üzemanyag kártya szám,[Fuel card number],Login Putty
+Számlaszám,[Invoice number],Test text
+Válassza ki a tételt!,Select the item!,vrtSplita
+Mentés,[ Save ],downloadFile
+Fordítás,[ Translate ],Deductible tax value
+Betöltés,[ Loading],Product
+Connected (vc2-0),[Connected (vc2-0)],Payment
+Tételképzés mód név,[Batch mode name ],Stock type
+Munkahely,[ Workplace ],Tax rate
+Gyártás nap eltérés,[ Date of manufacture deviation ],List of allowed values
+Cikk:,[ Article: ],Printing
+Cikk név:,[ Article name: ],Work number code
+Tétel:,[ Item: ],It validates
+Lejárati dátum:,[ Expiry date: ],Aggregate values ​​by currency
+(*)Az üzem egyedi kódja,[ (*) Unique code of the plant ],Total tax value
+Cikk kód:,[ Article code: ],NAV status
+Etk:,[Etk: ],Check copy number
+Tételképzés mód kód,[ Batch mode code],VAT closing date
+(*)A munkahely neve,[(*) Name of workplace ],Swift code
+(*)A munkahely üzemen belüli egyedi kódja,[ (*) Unique code of the workplace on the holding ],Total net worth
+A munkahelyen aktuálisan feldolgozás alatt álló tétel kódja,[ Code of the batch currently being processed at the workplace],Indirect biz. song
+fut: select * from uzem,[run: select * from uzem ],Account type
+Select Ok: select * from uzem,[ Select Ok: select * from uzem],Interest type
+Banki nap?,[Bank day? ],Order
+Naptári napok,[ Calendar days ],Continuous service?
+ Dátumtól: ,[ From: ],Start of performance
+Paraméterek,[ Parameters ],Fuel card number
+ Dátumig: ,[ To: ],Account number
+(*)A dátum,[ (*) The date ],Select the item!
+Érvénytelenít,[ Cancel ],Rescue
+fut: select * from vagasi_igeny limit 100,[run: select * from vagasi_igeny limit 100 ],Translation
+Select Hiba: select * from vagasi_igeny limit 100,[ Select Error: select * from vagasi_igeny limit 100],Loading
+"Select Ok: select * from ebsz_qml_vagasi_igeny_tabla('2021-02-22','2021","[Select Ok: select * from ebsz_qml_vagasi_igeny_tabla ('2021-02-22', '2021 ]",Connected (vc2-0)
+"fut: select * from ebsz_qml_vagasi_igeny_tabla('2021-02-22','2021-06-21',95224637,'H')","[ run: select * from ebsz_qml_vagasi_igeny_tabla (' 2021-02-22 ',' 2021-06-21 ', 95224637,' H ')]",Lot formation mode name
+Üres mérlegre vár...,Waiting for empty scales...,Workplace
+Cikktáblázat,[Article table ],Production date difference
+Mérés,[ Measurement ],Article:
+Egalizált,[ Equalized ],Article Name:
+Korábbiak,[ Previous ],Item:
+Munkaszám,[ Number of jobs ],Leave date:
+Irány,[ Direction],(*)Unique code of the plant
+Nincs a munkahelyhez beállított tétel!,[There is no item set for the job!],Article code:
+Adja meg a,[ Enter ],Etc:
+darab számot,[ number of pieces ],Batch formation mode code
+raklap,[ pallet ],(*)The name of the workplace
+Adja meg a Raklap súlyát/Mozgó tárhely vonalkódját!,[ Enter Pallet weight / Moving storage barcode ],(*)Unique code of the workplace within the company
+Göngyöleg választás,[ Package selection],The code of the item currently being processed at the workplace
+Mérés kész,[ Measurement complete ],run: select * from uzem
+tárhely,[ Storage ],Select Ok: select * from uzem
+Raklap/Mozgó,[ Pallet / Moving ],Bank day?
+Utolsó mérés,[ Last measurement ],Calendar days
+Címke rontás,[ Label deterioration ],From date:
+Kijelölt tétel,[ Selected item ],Parameters
+Kijelölt cikktáblázat,[ Selected item table ],Until date:
+Betuméret,[Font size ],(*)The date
+Cikk kép megjelenítése,[Display item image ],It invalidates
+Sarzs: ,Lot:,fut: select * from vagasi_yes limit 100
+Kiszállítás:,[Delivery: ],Select Error: select * from vagasi_yes limit 100
+"Kiszedohöz kijelölés
+idopont",[ Assign to pickup\n],"""Select Ok: select * from ebsz_qml_vagasi_igeny_tabla('2021-02-22','2021"""
+"Mennyiség
+kiszedett",[Quantity\n],"""run: select * from ebsz_qml_vagasi_igeny_tabla('2021-02-22','2021-06-21',95224637,'H')"""
+Mind ki,[ All out ],Waiting for an empty balance sheet...
+Nyomtatás túránként - raktár bontásban?,[ Print per tour - broken down by warehouse? ],Table of articles
+"Túránként
+gyártási utasításonként",[ Per tour\n],Measurement
+Mind kijelölés/megfordítás,[All selection / inversion ],Equalized
+Hiány mennyiség,[ Shortage quantity ],They are earlier
+1. vontatmány rendszám,[ 1. ],Work number
+"Gyujto (darab)
+kijelölt",[Collector (pieces)\n],Direction
+Zárókészlet jelzés e-mail címek,[Closing stock indication e-mail addresses ],There is no item set for the workplace!
+Leltár mennyiség jelleg,[ Inventory quantity type ],Enter the
+Lejárat jelzés e-mail címek,[ Expiration indication e-mail addresses ],piece number
+Árualap viszony,[ Commodity basis relationship ],pallet
+Szervezet kód,[ Organization code ],Enter the weight of the pallet/bar code of the mobile storage area!
+Készletmozgás bizonylaton megjelenítendo szöveg,[ Text to be displayed on the inventory movement document ],It's a tough choice
+Zóna kód,[ Zone code ],Measurement is complete
+Fokönyvi feladás?,[ General ledger posting? ],storage
+Tárhelyre bevételezés mozgásnem,[ Storage entry movement type ],Pallet/Movable
+Zóna név,[ Zone ],Last measurement
+Beszállító kód,[Supplier Code ],Label damage
+Vállalati raktárak,[ Corporate Warehouses ],Selected item
+"Cikktáblázat
+(kizárt cikkek)",[ Item Table\n],Featured article table
+Maradék eltérés többlet mozgásnem,[Residual deviation Excess movement type ],Font size
+Vezérelt leltár?,[ Controlled inventory?\n],Show article image
+Tárhelyrol kiadás mozgásnem név,[Release from storage movement name ],Batch:
+Leltárkör,[ Inventory circle ],Delivery:
+Maradék eltérés hiány mozgásnem név,[ Residual discrepancy missing movement type ],"""Selection for extraction"
+Tárhely kód,[ Storage code ],"date"""
+Készletszint jelzés e-mail címek,[ Inventory level indication e-mail addresses ],"""Quantity"
+"Cikktáblázat
+(engedélyezett cikkek)",[ Article table\n],"taken out"""
+"Cikktáblázat név
+(kizárt cikkek)",[Article table name\n],All out
+alma,[Apple],Printing per tour - warehouse breakdown?
+körte,[pear],"""Every tour"
+Nincs a munkahelyhez beállított feldolgozás alatti tétel!,[ No item set for workplace set! ],"per production instructions"""
+Megrendelés száma,Invoice No.,All select/invert
+Cikk kód megjelenítése,[Display article code ],Lack of quantity
+Cikk infó megjelenítése,[ Display article info ],1. towing vehicle registration number
+Útvonal betuméret,[ Route font size ],"""Light (piece)"
+Cikk betuméret,[ Article font size ],"assigned"""
+Mérleg cimkék rövidítése,[ Abbreviation of balance labels ],Closing set signal e-mail addresses
+Választó gombok szélessége,[ Width of selection buttons ],Inventory quantity nature
+Cikk név megjelenítése,[ Display article name ],Expiration notice e-mail addresses
+ETK megjelenítése,[ Display ETK],Commodity base relationship
+Napi generálás,[Daily generation ],Organization code
+Nap feloldása,[ Day unlock ],Text to be displayed on the stock movement receipt
+Nap zárolása,[ Day lock ],Zone code
+Adat generálás,[ Data generation],Submitting a textbook?
+Connected (vc5-0),[Connected (vc5-0) ],Entry to storage does not move
+Connected (vc4-0),[ Connected (vc4-0)],Zone name
+Select Ok: select rjo_get_rendszer_parameter('EBSZ_HSZ_GJU_KETRECBEN_DA,[Select Cause: select rjo_get_system_parameter ('EBSZ_HSZ_GJU_KETRECBEN_DA ],Supplier code
+"fut: select rjo_get_rendszer_parameter('EBSZ_HSZ_GJU_KETRECBEN_DARAB_LISTA','10-12')","[ running: select rjo_get_system_parameter (' EBSZ_HSZ_GJU_KETRECBEN_PUT_LIST ',' 10-12 ') ]",Corporate warehouses
+Rendszer paraméter,[ System parameter],"""Article table"

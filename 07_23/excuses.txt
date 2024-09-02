@@ -1,0 +1,70 @@
+Well, that's a first
+I usually get a notification when that happens
+Why do you want to do it that way?
+I'm not familiar with it so I didn't fix it in case I made it worse
+It's never done that before
+That wasn't in the original specification
+It probably won't happen again
+That isn't covered by my job description
+I can have a look but there's a lot of if statements in that code!
+Somebody must have changed my code
+The third party documentation is wrong
+Oh, that was only supposed to be a placeholder
+You must be missing some of the dependencies
+I thought you signed off on that?
+That's not a bug it's a configuration issue
+That error means it was successful
+I'm still working on that as we speak
+We outsourced that months ago
+That's already fixed it just hasn't taken effect yet
+The download must have been corrupted
+The third party API is not responding
+I thought I finished that
+The project manager told me to do it that way
+Our redundant systems must have failed as well
+It's an unexpected emergent behaviour of several last minute abstractions
+That feature would be outside of the scope
+That important email must have been marked as spam
+In the interest of efficiency I only check my email for that on a Friday
+Your browser must be caching the old content
+That wouldn't be economically feasible
+That feature was slated for phase two
+It's a browser compatibility issue
+I can't test everything
+It must be a firewall issue
+Our code quality is no worse than anyone else in the industry
+That process requires human oversight that nobody was providing
+I can't make that a priority right now
+Even though it doesn't work, how does it feel?
+I must not have understood what you were asking for
+That worked perfectly when I developed it
+Maybe somebody forgot to pay our hosting company
+That behaviour is in the original specification
+I heard there was a solar flare today
+I haven't had the chance to run that code yet
+This is a previously known bug you told me not to work on yet
+It must be a hardware problem
+THIS can't be the source of THAT
+It would take too long to rewrite the code from scratch
+It must be because of a leap year
+The problem seems to be with our legacy software
+The marketing department made us put that there
+Actually, that's a feature
+Our internet connection must not be working
+It must be because of a leap second
+I had to do the project backwards as people demanded results out of order
+That's interesting, how did you manage to make it do that?
+What did I tell you about using parts of the system you don't understand?
+I haven't been able to reproduce that
+The client wanted it changed at the last minute
+I was just fixing that
+Management insisted we wouldn't need to waste our time writing unit tests
+The WYSIWYG must have produced an invalid output
+I have never seen that before in my life
+I'm surprised it works as well as it does
+This code was not supposed to go in to production yet
+I was told to stop working on that when something important came up
+What did you type in wrong to get it to crash?
+I couldn't find any examples of how that can be done anywhere else in the project
+It would have taken twice as long to build it properly
+Well at least we know not to try that again

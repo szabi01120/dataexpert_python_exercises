@@ -1,0 +1,12 @@
+ScoreType,Kind,Label,Description
+Participation,Sum,Részvétel,Automatikusan jár minden egyes megkezdett játékért.
+Abort,Sum,Lelépés,Büntetés; automatikusan jár minden félbehagyott játék után.
+Kills,Sum,Gyilok,Minden egyes megölt ellenfél után jár egy pont.
+Deaths,Sum,Halál,Minden egyes halál után jár egy pont.
+Wins,Sum,Győzelem,Megnyert meccsek száma. 
+Combos,Sum,Kombók,Egyszerre több játékos megölésért.
+Frags,Sum,Frags,Ellenfél cafatokra szagatásáért jár.
+Heads,Sum,Fejlövés,Fejlövésért jár.
+Steps,Sum,Lépések száma,Megetett lépések száma.
+Snakes,Sum,Kígyók,
+Ladders,Sum,Létrák,

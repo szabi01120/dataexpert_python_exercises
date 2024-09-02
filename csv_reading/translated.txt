@@ -1,0 +1,956 @@
+Text to be translated
+Mode of transport
+Piece
+AWARD REQUEST
+Name
+Batch
+Pallet summary
+Net quantity
+"ETK, article name"
+Expiration date
+Hungary
+It's freezing
+He was cold
+Article name
+Shipping method
+Delivery date
+Place of loading
+License plate number
+Vevo name
+Account number
+Pallet
+Article code
+Cool way
+Carton number
+Net weight
+Container number
+Item
+Container
+Stock movement biz. no
+Production date
+comment
+it's good
+Drilling considerations
+piercing
+Not yet
+Select all
+Site
+Weight (kg)
+Yes
+No
+Plant
+Update
+Fo body landscape
+Utihulla
+Average weight
+Stock rating
+Whole chicken
+CHICKEN
+Invoice is valid without signature and stamp.
+Data
+Date
+Production sheet
+Shows
+Storage
+Comment
+Text
+Language name
+Mist
+Argument.?
+Bar code
+Network status:
+<font color=green><b>Connected</b></font>
+Status update
+Status query
+<font color=red><b>Disconnected</b></font>
+Any internal comment
+Currency:
+Default billing currency
+Language
+Buttons
+"Database session
+check connection"
+"Reconnect
+to database"
+First ear
+Second ear
+Third ear
+Last ear
+Loading workbook...
+Settlement
+Country name
+Discount (%)
+ Should the orders appear in a table?
+User code
+Work number name
+Quantity
+AD
+Currency name
+Agent code
+Last year
+Partner type
+Reference
+Payment method name
+Other data
+Last month
+Year
+Status
+Agent name
+Partner type name
+ Preparedness:
+Month
+IBAN
+Day
+Today
+Delivery Address
+Validation
+(*)The text to be translated
+Bank account code
+Business no
+Product code
+Description
+Address name
+Basic data
+Title
+"Basis
+unit price"
+Language code
+piece
+Your declared tax number
+Level:
+Product purchase priority:
+Product purchase price type:
+Generated address:
+ Delivery of a certified delivery note?
+End of argument
+Public space name:
+Accompanying data content:
+"Tax rate
+type code"
+Product purchase currency:
+"Purchase rate
+type code"
+Worksheet log book:
+Staircase:
+Short name
+Deadline for degree certificate:
+Value
+Tax rate type:
+Store debit title:
+Exchange rate type code
+Door:
+Deadlines
+Lot formation method (production):
+Inventory posting ledger:
+"Validity
+over"
+Tax key
+ Only waybill handling?
+Exchange rate type period
+Exchange rates
+Cost location:
+Cash register journal:
+Bank ledger:
+Headquarters address
+Reverse VAT rule
+Group identification number:
+Building:
+(*)The code of the language
+Alternative name
+Label
+(*)Mist
+Message
+OK
+Name
+Exit
+It modifies
+Uploaded
+Deletion
+Automatic upload?
+Partner name
+Parameter
+E-mail address
+Partner code
+Can it differ from an equalized amount?
+Username
+Country code
+A set of values ​​of type Text
+(*)Name
+(*)[Company]->Unique code of the company
+Company code
+Company name
+The plain inscription
+"The ""in quotation marks"" caption"
+Penultimate ear
+Apostrophe' ear
+"<font color=red><b>The red, HTML text</b></font>"
+The dotted... caption
+ISO-639-1 code
+Bar code:
+Pallet:
+Where:
+The changes will take effect at the next login.
+Type
+Schema
+The name of the scheme
+Stored Procedures
+The name of the stored procedure
+The type of the return value
+The formal parameter list
+(*)[Language]->The language code
+Camera image
+Bar code: -
+Barcode+Image
+Can a tour be started?
+Jurisdiction
+Inventory level upload rule name
+Primary plant name
+Stock level upload rule code
+Primary plant code
+Company organization
+Manufacturer approval start date
+Organization
+ Tag piece:
+Payment code
+Beer
+All
+Movement gender name
+Cargo escort?
+Bills
+Role user query privilege
+Invoice printer:
+Warehouse code
+Start/end
+Location code
+Non-revenue movement name
+Receiving warehouse name
+EKAER user
+Sales rule
+Row - Column replacement (I)
+(*)[User]->Name
+Automatic update
+Activity template
+Tour management rule
+User code prints
+Tour status
+Group name
+Title code
+Gate ticket
+ minute
+Activity template name
+Primary site and warehouse setting
+Tour
+Loading
+Code dictionary
+Period:
+Storage:
+User
+Room
+Loading status
+Company user
+"Settings
+display"
+Cash flow rule
+Stack
+Copy roles and stock movement rights
+Role users
+Primary location:
+Gate ticket?
+Tour receipt number
+Selected piece (gujto)
+Live plans only?
+Browser
+ By device
+Piece to be printed (gujto)
+Redesign
+"Printing
+per article"
+All in
+Designated scope
+Print per tour - page change per tour?
+Availability
+"Quantity
+assigned"
+ Missing it?
+"Tour 1 -
+collection points"
+Currency
+Invoice issuing method
+Pb. number
+Commission (%)
+End of performance
+Gross value
+Item comment
+Dated
+Exchange rate
+Payment method code
+Invoice note
+Tax date
+Order method:
+Exhibitor
+Account counter status
+Fulfillment
+Accounts Payable method
+Currency code
+Unordered value
+ETC
+Partner:
+(*)[In which settlement the site is located.]->Unique name of the country
+Number of hours after midnight
+Inventory order
+Slaughterhouse?
+ENAR identifier
+Registration number:
+Offline ticket type
+Account title name
+Price type name
+Parity:
+Lot formation method (suppliers):
+Tangible asset ledger:
+Currency exchange rate type:
+Starting round:
+Exchange rate type name
+Plant:
+"Validity
+beginning"
+Amount Units:
+ Goods exchange service?
+ Transport organization transfer?
+Compensation logbook:
+Maximum amount that can be moved at one time
+"Sales rate
+type name"
+City:
+Min. order value:
+Late interest type:
+Tax number:
+Public tax ID number:
+ Are you billing?
+Supplier order deadline:
+Tax authority control data provision
+"Cash flow rate
+type name"
+Headquarters address:
+Acquisition payment six. days:
+Operation
+Final round:
+Purchase payment method:
+Purchase rate type:
+FELIR identifier:
+Ledger
+Nature of public space:
+Beginning of argument
+Sales rate type:
+"Sales rate
+type code"
+ Default inventory quantity nature:
+Invoice acceptance deadline:
+Company
+"Purchase rate
+type name"
+"Tax rate
+type name"
+Payment:
+Vevoi order deadline:
+Invoice issue deadline:
+Stock turnover deadline:
+Company rate
+Ir. no
+Incoming invoice posting degree. diary:
+"Cash flow rate
+type code"
+Operating/Excise license number:
+ Warehouse service?
+Scope
+Invoice posting log book:
+House number:
+Production type:
+(*)Unique code of the company
+Tour lock filling method
+Price type code
+Storage proposal?
+Product council identifier
+Delivery note per warehouse?
+Address code
+Account title
+Batch code segment
+KTJ (Environmental Protection Territorial Sign)
+Search name
+Own shop work number
+Warehouse tracking?
+Own shop work number name
+Tour start mode
+Customer
+[My shop job number]->Batch code segment
+[My shop job number]->Name
+"Substituted article
+unit price/kg"
+"Unit price/kg
+discrepancy"
+"Unit price/kg
+deviation %"
+"Substitute
+article code"
+"Substituted
+article ETK"
+"Substitute article
+unit price"
+QML
+ Automatic upload?
+Fixed degree book account code
+Asset group
+ Gradebook category code filter:
+E. group name
+ Does it update date navigation preferences?
+Primary site
+Transfer without inventory movement
+Delivery date for cross-docking forwarding company
+Pallet measurement
+"Designated
+ for a tour - at storage facilities"
+(*)Unique code of the site within the company
+Sluice
+Priority treatment?
+ City:
+Pallet aggregate printing - selected
+Title:
+Setting up the printing of the commission list
+Total weight (kg):
+Return reason code
+Other data:
+Article
+F.Hatarido:
+Can it be changed before printing?:
+"0001I, Sales abroad with pick-up"
+Freight discount to be calculated?:
+"Tax
+value"
+Basic unit price:
+City:
+Settings
+License plate number:
+"Return
+piece (jujto)"
+Invoice date
+Payment deadline
+Preparedness
+Period:
+Development code
+No movement
+External identifier
+Plant name
+Swift code
+Cash register
+Plant code
+Inventory query rule
+Title
+Warehouse name
+Start of depreciation
+Generation
+ÉCS key name
+Draft generation
+Number of years
+Serial Number
+Depreciation key
+Device number
+Depreciation plan
+ÉCS key code
+ECS value
+Depreciation draft item
+Development Reserve
+E. assessment name
+Subnumber
+ÉCS calculation method
+Regeneration
+Residual value
+E. evaluation code
+Mode of transport
+Pallet summary
+Net quantity
+"ETK, article name"
+Expiration date
+Hungary
+Article name
+Shipping method
+Place of loading
+License plate number
+Buyer? name
+Account number
+Article code
+Way of authority
+Carton number
+Net weight
+Container number
+Item
+Container
+Stock movement biz. song
+Date of manufacture
+Delivery date
+It is foreseeable
+it's good
+Coverage considerations
+transport
+Not yet
+select all
+Weight (kg)
+Plant
+Update
+F? body landscape
+Average volume
+Stock qualification
+Whole chicken
+Network status:
+Invoice signature and stamp? valid without
+Date
+Production sheet
+Storage
+Status update
+ Tag piece:
+Payment code number
+Status query
+Last phase
+Language name
+Text
+<font color=red><b>Disconnected</b></font>
+Loading workbook...
+Pleasant interior? comment
+Currency:
+Bar code
+Default billing currency
+<font color=green><b>Connected</b></font>
+Movement gender name
+Mist
+Database session connection check
+First? phase
+Second phase
+argument.?
+Third phase
+Name
+Goods price?
+Comment
+Reconnect to database
+Bills
+Message
+(*)The code of the language
+"The "quote" caption"
+Penultimate phase
+Apostrophe' phase
+Role user query privilege
+Invoice printer:
+ISO-639-1 code
+Warehouse code
+Start/end
+Location code
+Bank account code
+Are you making money? no movement noun
+Label
+Are you making money? warehouse name
+EKAER user
+Sales rule
+(*)[User]->Name
+Automatic update
+Activity template
+Trunk management rule
+User code prints
+Tribe status
+Group name
+Title code
+Activity template name
+Primary site and warehouse setting
+Tribe
+Loading
+Courier delivery
+Period:
+User code
+Storage:
+User
+Loading status
+Company user
+Show settings
+It modifies
+Deletion
+Uploaded
+Exit
+Bar code:
+Name
+Cash flow rule
+Automatic upload?
+The amendments are the following? they take effect upon login.
+The name of the scheme
+Stored Procedures
+The name of the stored procedure
+The type of the return value
+(*)The text to be translated
+Language code
+The formal parameter list
+(*)[Language]->The language code
+Schema
+Type
+Parameter
+Bar code: -
+Camera image
+Barcode+image
+Can a tribe be started?
+(*)Mist
+Jurisdiction
+Inventory level upload rule name
+Primary plant name
+Stock level upload rule code
+Primary plant code
+Company organization
+Company code
+Product plate approval begins? date
+Company name
+Copy roles and stock movement rights
+Description
+Role users
+Primary location:
+Master document number
+Installation
+Country name
+Selected item (collect??)
+Is he just alive? plans?
+Purchase summary
+ By stock level
+Piece to be printed (collect??)
+Redesign
+Quantity
+Print per article
+Designated authority
+Print per section - page change per section?
+Accessibility
+Product code
+Quantity selected
+ Missing delivery?
+1. Trunk - collection points
+Substituted item unit price/kg
+Unit price/kg difference
+Substitute? item unit price
+Unit price/kg difference %
+Substitute? article code
+Substituted article ETK
+Fixed ledger account code
+Asset group
+ General ledger category code supplier:
+E. group name
+ Date navigation updates suppliers?
+ Should the orders appear in a table?
+Primary location
+Transfer without inventory movement
+Delivery date for cross-docking forwarding company
+Gross value
+Pallet measurement
+For a designated tribe - in storage areas
+(*)Unique code of the site within the company
+Priority treatment?
+ Installation:
+Pallet aggregate? print - selected
+Setting up the printing of the commission list
+Total weight (kg):
+Return reason code
+Other data:
+F. Your deadline?:
+Can it be changed before printing?:
+"0001I, Sales abroad with pick-up"
+Freight discount to be calculated?:
+Tax Value
+Basic unit price:
+Month
+Installation:
+Settings
+License plate number:
+Return item (collect?)
+Invoice date
+Payment deadline?
+Product purchase priority:
+Product purchase price type:
+Generated address:
+ Delivery of a certified delivery note?
+Argument. it's over
+Stock Level Name:
+(*)[On which installation the site is located.]->Unique name of the country
+Number of trips after midnight
+Accompanying goods? data content:
+Tax Rate type code
+Product purchase currency:
+Purchase Exchange rate type code
+Inventory order
+Slaughterhouse?
+Worksheet ledger journal:
+Staircase:
+ENAR identifier
+Short name
+Registration number:
+Ledger receipt deadline:
+Value
+Tax Rate type:
+Offline ticket type
+Account title name
+Price type name
+Partner type
+Parity:
+Store debit title:
+Exchange rate type code
+Door:
+Deadlines
+Lot formation method (production):
+Inventory posting ledger journal:
+Expiration date
+Tax key
+ Only waybill handling?
+Exchange rate type period
+Exchange rates
+Cost location:
+Cash register journal:
+Bank ledger journal:
+Headquarters address
+Reverse VAT rule
+Partner type name
+Group identification number:
+Building:
+Lot formation method (suppliers):
+Tangible asset ledger journal:
+Money movement Exchange rate type:
+Starting round:
+Exchange rate type name
+Plant:
+Start of validity
+Quantity unit code:
+Accompanying goods? service?
+Transport organization transfer?
+Compensation ledger journal:
+Maximum quantity that can be moved at one time:
+Sales rate type name
+Installation:
+Min. order value:
+Type of late interest:
+Tax number:
+Administrative tax number:
+Are you billing?
+Supplier order deadline:
+Tax authority control data provision
+Currency exchange rate type name
+Headquarters address:
+Purchase payment deadlines:
+Operation
+Final Round:
+Purchase payment method:
+Purchase rate type:
+FELIR identifier:
+General book
+Stock nature:
+Beginning of argument
+Sales rate type:
+Sales rate type code
+Default inventory quantity nature:
+Invoice acceptance deadline:
+Company
+Purchase rate type name
+Country code
+Tax rate type name
+Payment:
+Customer order deadline:
+Deadline for invoice issuance:
+Stock turnover deadline:
+Company rate
+Postal code
+Will you arrive? invoice posting ledger journal:
+Currency exchange rate type code
+Operation/license number:
+Warehouse service?
+Scope
+Invoice posting ledger journal:
+House number:
+Production type:
+(*)Unique code of the company
+Companion sluice filling method
+Address name
+Title
+Price type code
+Storage proposal?
+Product council identifier
+Delivery note per warehouse?
+Address code
+Account title
+Partner code
+Batch code segment
+KTJ (Environmental Protection Territorial Sign)
+Look for? name
+Partner name
+Own shop work number
+Warehouse cycle tracking?
+Own shop work number name
+Co-launch mode
+(*)[Company]->Unique code of the company
+Buyer??
+[My shop job number]->Batch code segment
+[My shop job number]->Name
+Automatic upload?
+Start of depreciation
+Generation
+VAT key name
+Draft generation
+Number of years
+Serial Number
+Depreciation key
+Device number
+Depreciation plan
+VAT key code
+VAT value
+Status
+Depreciation draft item
+Development Reserve
+Rating name
+Subnumber
+VAT calculation method
+Regeneration
+Residual value
+Evaluation code
+Plant:
+Text to be translated
+Translated text
+Show Putty Registry
+Log:
+Login Putty
+Test text
+vrtSplita
+downloadFile
+Deductible tax value
+Product
+Payment
+Stock type
+Tax rate
+List of allowed values
+Printing
+Work number code
+It validates
+Aggregate values ​​by currency
+Total tax value
+NAV status
+Check copy number
+VAT closing date
+Swift code
+Total net worth
+Indirect biz. song
+Account type
+Interest type
+Order
+Continuous service?
+Start of performance
+Fuel card number
+Account number
+Select the item!
+Rescue
+Translation
+Loading
+Connected (vc2-0)
+Lot formation mode name
+Workplace
+Production date difference
+Article:
+Article Name:
+Item:
+Leave date:
+(*)Unique code of the plant
+Article code:
+Etc:
+Batch formation mode code
+(*)The name of the workplace
+(*)Unique code of the workplace within the company
+The code of the item currently being processed at the workplace
+run: select * from uzem
+Select Ok: select * from uzem
+Bank day?
+Calendar days
+ From date:
+Parameters
+ Until date:
+(*)The date
+It invalidates
+fut: select * from vagasi_yes limit 100
+Select Error: select * from vagasi_yes limit 100
+"Select Ok: select * from ebsz_qml_vagasi_igeny_tabla('2021-02-22','2021"
+"run: select * from ebsz_qml_vagasi_igeny_tabla('2021-02-22','2021-06-21',95224637,'H')"
+Waiting for an empty balance sheet...
+Table of articles
+Measurement
+Equalized
+They are earlier
+Work number
+Direction
+There is no item set for the workplace!
+Enter the
+piece number
+pallet
+Enter the weight of the pallet/bar code of the mobile storage area!
+It's a tough choice
+Measurement is complete
+storage
+Pallet/Movable
+Last measurement
+Label damage
+Selected item
+Featured article table
+Font size
+Show article image
+Batch:
+Delivery:
+"Selection for extraction
+date"
+"Quantity
+taken out"
+All out
+Printing per tour - warehouse breakdown?
+"Every tour
+per production instructions"
+All select/invert
+Lack of quantity
+1. towing vehicle registration number
+"Light (piece)
+assigned"
+Closing set signal e-mail addresses
+Inventory quantity nature
+Expiration notice e-mail addresses
+Commodity base relationship
+Organization code
+Text to be displayed on the stock movement receipt
+Zone code
+Submitting a textbook?
+Entry to storage does not move
+Zone name
+Supplier code
+Corporate warehouses
+"Article table
+(excluded articles)"
+Residual deviation excess motion
+Controlled inventory?
+Release from storage no movement name
+Inventory circle
+Residual discrepancy lack of motion no name
+Storage code
+Stock level indication e-mail addresses
+"Article table
+(authorized articles)"
+"Article table name
+(excluded articles)"
+Apple
+pear
+There is no item under processing set for the workplace!
+Order number
+Show article code
+Show article info
+Path font size
+Article font size
+Abbreviation for scale labels
+Width of radio buttons
+Show article name
+Show ETK
+Daily generation
+Sun unlock
+Day lock
+Data generation
+Connected (vc5-0)
+Connected (vc4-0)
+Select Reason: select rjo_get_system_parameter('EBSZ_HSZ_GJU_KETRECBEN_DA
+"run: select rjo_get_system_parameter('EBSZ_HSZ_GJU_KETRECBEN_PARAB_LISTA','10-12')"
+System parameter

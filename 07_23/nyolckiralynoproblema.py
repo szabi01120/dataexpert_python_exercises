@@ -1,5 +1,5 @@
 def main():
-    n = 10
+    n = 20
     maradek = n % 12
     paros_list = [i for i in range(2, n + 1, 2)]
     
