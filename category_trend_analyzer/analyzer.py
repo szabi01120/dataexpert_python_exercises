@@ -13,6 +13,21 @@ class TrendsAnalyzer:
             if (year, quarter) in self.df[['Year', 'Negyedév']].values
         ]
         self.audience = self.df["Közönség"].unique().tolist()
+        
+    def renderStart(self):
+        print("----------------------")
+        print("----TREND ANALYZER----")
+        print("----------------------")
+        print("Top 10 trend analysis")
+    
+    def optionsToChoose(self):
+        countries = [(index + 1, country) for index, country in enumerate(self.countries)]
+        types = [(index + 1, dfType) for index, dfType in enumerate(self.types)]
+        audience = [(index + 1, audience) for index, audience in enumerate(self.audience)]
+        
+        print("Countries to choose from:", countries, "\n")
+        print("Types to choose from:", types, "\n")
+        print("Audience to choose from:", audience, "\n")
 
     def historyCsv(self, entry):
         headers = ['Date', 'Country', 'Type', 'Audience', 'Quarter']
@@ -57,7 +72,10 @@ class TrendsAnalyzer:
             if trend in previous_ranking:
                 prev_rank = previous_ranking[trend]
                 change_value = prev_rank - current_rank
-                changes[trend] = f"{change_value:+d}"
+                if change_value == 0:
+                    changes[trend] = "no change"
+                else:
+                    changes[trend] = f"{change_value:+d}"
             else:
                 changes[trend] = "new entry"
 
@@ -94,12 +112,9 @@ class TrendsAnalyzer:
             (self.df["Year"] == year)
         ]
         
-        print("Current df:", current_df, "\n")
-        
         # Count the occurrences of each trend in the current DataFrame and sort to get the top 10 trends
         trend_counts = current_df["Trend"].value_counts().head(10)
         current_trends = trend_counts.index.tolist()
-        print("Current trends:", current_trends, "\n")
 
         # Determine the previous year and quarter to compare with
         prev_year, prev_quarter = self.get_previous_quarter(year, quarter)
@@ -115,62 +130,74 @@ class TrendsAnalyzer:
                 (self.df["Negyedév"] == prev_quarter) &
                 (self.df["Year"] == prev_year)
             ]
-            # Get the top 10 trends from the previous quarter
             previous_trend_counts = previous_df["Trend"].value_counts().head(10)
             previous_trends = previous_trend_counts.index.tolist()
-            print("Previous trends:", previous_trends, "\n")
             
-            # Compare only the top 10 trends of the current and previous quarters
             trend_changes = self.compare_trends(current_trends, previous_trends)
-            print("Trend changes:", trend_changes, "\n")
 
-        # Create a DataFrame for the top 10 trends with their changes
         top10_df = pd.DataFrame({
             'Trend': current_trends
         })
 
-        # Map the changes and percentages to the top 10 trends DataFrame
         top10_df['Change'] = top10_df['Trend'].map(trend_changes).fillna("no change")
         trend_percentages = self.trend_count_func(trend_counts)
         print("Trend percentages:", trend_percentages, "\n")
         top10_df['Percentage'] = top10_df['Trend'].map(trend_percentages).fillna(0)
 
         return top10_df
+    
+    def resultSummary(self, country_input, type_input, audience_input, quarter_input, year_input):        
+        filtered_result = self.filtered_result(country_input, type_input, audience_input, quarter_input, year_input)
 
+        entry = {
+            'Date': pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'Country': country_input,
+            'Type': type_input,
+            'Audience': audience_input,
+            'Year': year_input,
+            'Quarter': quarter_input
+        }
+        self.historyCsv(entry)
+        self.write_changes_to_csv(filtered_result.set_index('Trend')['Change'].to_dict(), entry)
+        
+    def splitInput(self, input_list):
+        filters_input = list(map(int, input_list.split()))
+        
+        country_input = self.countries[filters_input[0] - 1]
+        type_input = self.types[filters_input[1] - 1]
+        audience_input = self.audience[filters_input[2] - 1]
+        quarter_input = filters_input[3]
+        year_input = filters_input[4]
+        
+        return country_input, type_input, audience_input, quarter_input, year_input
+        
     def analyze(self):
+        self.renderStart()
+        self.optionsToChoose()        
+        chosen_options_list = input("Enter the filters in the order of (int) -> [country, type, audience, quarter, year]: ")
+        splitted_input = self.splitInput(chosen_options_list)
+        self.resultSummary(splitted_input[0], splitted_input[1], splitted_input[2], splitted_input[3], splitted_input[4])
+        
         while True:
-            print("----------------------")
-            print("----TREND ANALYZER----")
-            print("----------------------")
-            print("Top 10 trend analysis")
-            print("Countries to choose from: ", [(index + 1, country) for index, country in enumerate(self.countries)], "\n")
-            print("Types to choose from: ", [(index + 1, dfType) for index, dfType in enumerate(self.types)], "\n")
-            print("Audience to choose from: ", [(index + 1, audience) for index, audience in enumerate(self.audience)], "\n")
-            print("Please enter the filters in the order of (int) -> [country, type, audience, quarter, year]:")
+            splitted_input = ()
+            self.renderStart()
+            print("Choose from the following options:")
+            print("1.) Filter summary data")
+            print("2.) Filter a specific trend")
             choice_input = input("Enter your choice: ")
-
-            choice_input = list(map(int, choice_input.split()))
-            country_input = self.countries[choice_input[0] - 1]
-            type_input = self.types[choice_input[1] - 1]
-            audience_input = self.audience[choice_input[2] - 1]
-            quarter_input = choice_input[3]
-            year_input = choice_input[4]
-
-            print("Selected:", country_input, type_input, audience_input, quarter_input, year_input)
-
-            filtered_result = self.filtered_result(country_input, type_input, audience_input, quarter_input, year_input)
-            print(filtered_result)
-
-            entry = {
-                'Date': pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S'),
-                'Country': country_input,
-                'Type': type_input,
-                'Audience': audience_input,
-                'Year': year_input,
-                'Quarter': quarter_input
-            }
-            self.historyCsv(entry)
-            self.write_changes_to_csv(filtered_result.set_index('Trend')['Change'].to_dict(), entry)
+            print()
+            
+            if choice_input == "1":
+                self.optionsToChoose()
+                print("Please enter the filters in the order of (int) -> [country, type, audience, quarter, year]:")
+                filters_input = input("Enter your choice: ")
+                splitted_input = self.splitInput(filters_input)
+                print(type(splitted_input))
+                
+                self.resultSummary(splitted_input[0], splitted_input[1], splitted_input[2], splitted_input[3], splitted_input[4])
+            elif choice_input == "2":
+                print("splitted_input", splitted_input)
+                
 
 def main():
     analyzer = TrendsAnalyzer("trends.csv")
