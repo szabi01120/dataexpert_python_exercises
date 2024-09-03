@@ -5,8 +5,14 @@ class TrendsAnalyzer:
         self.df = self.read_trends(file_path)
         self.countries = self.df["Ország"].unique().tolist()
         self.types = self.df["Típus"].unique().tolist()
-        self.audience = self.df["Közönség"].unique().tolist()
+        self.df["Year"] = pd.to_datetime(self.df["Dátum"]).dt.year
+        self.years = self.df["Year"].unique().tolist()
         self.quarters = [1, 2, 3, 4]
+        self.quarters_per_year = [
+            (year, quarter) for year in self.years for quarter in self.quarters 
+            if (year, quarter) in self.df[['Year', 'Negyedév']].values
+        ]
+        self.audience = self.df["Közönség"].unique().tolist()
 
     def historyCsv(self, entry):
         headers = ['Date', 'Country', 'Type', 'Audience', 'Quarter']
@@ -14,7 +20,7 @@ class TrendsAnalyzer:
         df = pd.DataFrame([entry], columns=headers)
         
         df.to_csv("history.csv", index=False, mode='a', header=not pd.io.common.file_exists("history.csv"))
-
+        
     def write_changes_to_csv(self, changes, entry):
         changes_list = []
         for trend, change in changes.items():
@@ -24,6 +30,7 @@ class TrendsAnalyzer:
                 'Type': entry['Type'],
                 'Audience': entry['Audience'],
                 'Quarter': entry['Quarter'],
+                'Year': entry['Year'],
                 'Trend': trend,
                 'Change': change
             })
@@ -31,15 +38,15 @@ class TrendsAnalyzer:
         changes_df = pd.DataFrame(changes_list)
         changes_file = "trend_changes.csv"
 
-        changes_df.to_csv(changes_file, index=False, mode='a', header=not pd.io.common.file_exists(changes_file))
+        changes_df.to_csv(changes_file, index=False, mode='a', header=not pd.io.common.file_exists(changes_file), encoding='utf-8-sig')
 
-    def read_trends(self, file_path):
+    def read_trends(self, file_path) -> pd.DataFrame:
         return pd.read_csv(file_path)
 
     def trend_count_func(self, trend_counts):
         total_count = trend_counts.sum()
-        trend_percentages = (trend_counts / total_count).round(5) * 100
-        return trend_percentages.to_dict()
+        trend_percentages = (trend_counts / total_count) * 100
+        return trend_percentages
 
     def compare_trends(self, current_trends, previous_trends):
         changes = {}
@@ -61,44 +68,71 @@ class TrendsAnalyzer:
         return changes
 
     def get_rankings(self, df, quarter):
-        filtered_df = df[
-            (df["Negyedév"] == quarter)
-        ]
-        return filtered_df["Trend"].value_counts().head(10).index.tolist()
+        filtered_df = df[(df["Negyedév"] == quarter)]
+        return filtered_df["Trend"].value_counts().index.tolist()
 
-    def filtered_result(self, country, type, audience, quarter):
+    def get_previous_quarter(self, year, quarter):
+        if quarter == 1:
+            previous_quarter = 4
+            previous_year = year - 1
+        else:
+            previous_quarter = quarter - 1
+            previous_year = year
+        # Check if the (previous_year, previous_quarter) exists in the data
+        if (previous_year, previous_quarter) in self.quarters_per_year:
+            return previous_year, previous_quarter
+        else:
+            return None, None
+
+    def filtered_result(self, country, type, audience, quarter, year):
+        # Filter the DataFrame based on the given filters
         current_df = self.df[
             (self.df["Ország"] == country) & 
             (self.df["Típus"] == type) &
             (self.df["Közönség"] == audience) &
-            (self.df["Negyedév"] == quarter)
+            (self.df["Negyedév"] == quarter) &
+            (self.df["Year"] == year)
         ]
-        current_trends = self.get_rankings(current_df, quarter)
+        
+        print("Current df:", current_df, "\n")
+        
+        # Count the occurrences of each trend in the current DataFrame and sort to get the top 10 trends
+        trend_counts = current_df["Trend"].value_counts().head(10)
+        current_trends = trend_counts.index.tolist()
         print("Current trends:", current_trends, "\n")
 
-        if quarter == 1:
+        # Determine the previous year and quarter to compare with
+        prev_year, prev_quarter = self.get_previous_quarter(year, quarter)
+
+        if prev_year is None or prev_quarter is None:
             trend_changes = {}
         else:
-            previous_quarter = quarter - 1
+            # Filter the DataFrame for the previous quarter and year
             previous_df = self.df[
                 (self.df["Ország"] == country) & 
                 (self.df["Típus"] == type) &
                 (self.df["Közönség"] == audience) &
-                (self.df["Negyedév"] == previous_quarter)
+                (self.df["Negyedév"] == prev_quarter) &
+                (self.df["Year"] == prev_year)
             ]
-            previous_trends = self.get_rankings(previous_df, previous_quarter)
+            # Get the top 10 trends from the previous quarter
+            previous_trend_counts = previous_df["Trend"].value_counts().head(10)
+            previous_trends = previous_trend_counts.index.tolist()
             print("Previous trends:", previous_trends, "\n")
+            
+            # Compare only the top 10 trends of the current and previous quarters
             trend_changes = self.compare_trends(current_trends, previous_trends)
             print("Trend changes:", trend_changes, "\n")
 
+        # Create a DataFrame for the top 10 trends with their changes
         top10_df = pd.DataFrame({
             'Trend': current_trends
         })
 
+        # Map the changes and percentages to the top 10 trends DataFrame
         top10_df['Change'] = top10_df['Trend'].map(trend_changes).fillna("no change")
-
-        trend_counts = pd.Series(current_trends).value_counts()
         trend_percentages = self.trend_count_func(trend_counts)
+        print("Trend percentages:", trend_percentages, "\n")
         top10_df['Percentage'] = top10_df['Trend'].map(trend_percentages).fillna(0)
 
         return top10_df
@@ -112,7 +146,7 @@ class TrendsAnalyzer:
             print("Countries to choose from: ", [(index + 1, country) for index, country in enumerate(self.countries)], "\n")
             print("Types to choose from: ", [(index + 1, dfType) for index, dfType in enumerate(self.types)], "\n")
             print("Audience to choose from: ", [(index + 1, audience) for index, audience in enumerate(self.audience)], "\n")
-            print("Please enter the filters in the order of (int) -> [country, type, audience, quarter]:")
+            print("Please enter the filters in the order of (int) -> [country, type, audience, quarter, year]:")
             choice_input = input("Enter your choice: ")
 
             choice_input = list(map(int, choice_input.split()))
@@ -120,10 +154,11 @@ class TrendsAnalyzer:
             type_input = self.types[choice_input[1] - 1]
             audience_input = self.audience[choice_input[2] - 1]
             quarter_input = choice_input[3]
+            year_input = choice_input[4]
 
-            print("Selected:", country_input, type_input, audience_input, quarter_input)
+            print("Selected:", country_input, type_input, audience_input, quarter_input, year_input)
 
-            filtered_result = self.filtered_result(country_input, type_input, audience_input, quarter_input)
+            filtered_result = self.filtered_result(country_input, type_input, audience_input, quarter_input, year_input)
             print(filtered_result)
 
             entry = {
@@ -131,6 +166,7 @@ class TrendsAnalyzer:
                 'Country': country_input,
                 'Type': type_input,
                 'Audience': audience_input,
+                'Year': year_input,
                 'Quarter': quarter_input
             }
             self.historyCsv(entry)
