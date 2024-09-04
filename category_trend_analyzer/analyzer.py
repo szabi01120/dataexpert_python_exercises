@@ -175,11 +175,10 @@ class TrendsAnalyzer:
         self.renderStart()
         self.optionsToChoose()        
         chosen_options_list = input("Enter the filters in the order of (int) -> [country, type, audience, quarter, year]: ")
-        splitted_input = self.splitInput(chosen_options_list)
+        splitted_input = self.splitInput(chosen_options_list) #szűrők
         self.resultSummary(splitted_input[0], splitted_input[1], splitted_input[2], splitted_input[3], splitted_input[4])
         
         while True:
-            splitted_input = ()
             self.renderStart()
             print("Choose from the following options:")
             print("1.) Filter summary data")
@@ -192,7 +191,7 @@ class TrendsAnalyzer:
                 print("Please enter the filters in the order of (int) -> [country, type, audience, quarter, year]:")
                 filters_input = input("Enter your choice: ")
                 splitted_input = self.splitInput(filters_input)
-                print(type(splitted_input))
+                print(splitted_input)
                 
                 self.resultSummary(splitted_input[0], splitted_input[1], splitted_input[2], splitted_input[3], splitted_input[4])
             elif choice_input == "2":
