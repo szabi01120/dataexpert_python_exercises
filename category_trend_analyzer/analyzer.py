@@ -12,7 +12,6 @@ class TrendDataHandler:
     def save_to_csv(self, data, file_name, mode='a', header=False):
         data.to_csv(file_name, index=False, mode=mode, header=header, encoding='utf-8-sig')
 
-
 class TrendAnalyzer:    
     def __init__(self, data_handler: TrendDataHandler):
         self.df = data_handler.df
@@ -85,10 +84,9 @@ class TrendAnalyzer:
 
         top10_df['Change'] = top10_df['Trend'].map(trend_changes).fillna("no change")
         trend_percentages = self.trend_count_func(trend_counts)
-        top10_df['Percentage'] = top10_df['Trend'].map(trend_percentages).fillna(0)
+        top10_df['Percentage'] = top10_df['Trend'].map(trend_percentages).fillna(0) # Fill NaN values with 0
 
         return top10_df
-
 
     def result_summary(self, country_input, type_input, audience_input, quarter_input, year_input):
         filtered_result = self.filtered_result(country_input, type_input, audience_input, quarter_input, year_input)
@@ -108,7 +106,6 @@ class TrendAnalyzer:
         self.data_handler.save_to_csv(pd.DataFrame(changes_list), "trend_changes.csv", header=not pd.io.common.file_exists("trend_changes.csv"))
 
     def apply_filters_across_countries(self, trend, type_input, audience_input, quarter_input, year_input):
-        """Applies filters across all countries and summarizes trend data."""
         total_count = 0
         country_counts = {}
 
@@ -131,22 +128,18 @@ class TrendAnalyzer:
 
         self.data_handler.save_to_csv(result_df, "trend_summary_across_countries.csv")
 
-
-class UserInterface:
-    """Handles user interaction for the trend analysis."""
-    
+class UserInterface:    
     def __init__(self, trend_analyzer: TrendAnalyzer):
         self.analyzer = trend_analyzer
 
     def render_start(self):
-        """Renders the initial header."""
         print("----------------------")
         print("----TREND ANALYZER----")
         print("----------------------")
         print("Top 10 trend analysis")
 
     def display_options(self):
-        """Displays options for countries, types, and audiences."""
+        # options for filtering
         countries = [(index + 1, country) for index, country in enumerate(self.analyzer.countries)]
         types = [(index + 1, df_type) for index, df_type in enumerate(self.analyzer.types)]
         audience = [(index + 1, aud) for index, aud in enumerate(self.analyzer.audience)]
@@ -156,7 +149,6 @@ class UserInterface:
         print("Audience to choose from:", audience, "\n")
 
     def split_input(self, input_list):
-        """Parses user input into relevant filters."""
         filters_input = list(map(int, input_list.split()))
 
         country_input = self.analyzer.countries[filters_input[0] - 1]
@@ -207,13 +199,11 @@ class UserInterface:
 
                 self.analyzer.apply_filters_across_countries(selected_trend, type_input, audience_input, quarter_input, year_input)
 
-
 def main():
     data_handler = TrendDataHandler("trends.csv")
     analyzer = TrendAnalyzer(data_handler)
     ui = UserInterface(analyzer)
     ui.analyze()
-
 
 if __name__ == '__main__':
     main()
