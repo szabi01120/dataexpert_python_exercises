@@ -165,6 +165,7 @@ class UserInterface:
         chosen_options_list = input("Enter the filters in the order of (int) -> [country, type, audience, quarter, year]: ")
         country_input, type_input, audience_input, quarter_input, year_input = self.split_input(chosen_options_list)
         filtered_result = self.analyzer.filtered_result(country_input, type_input, audience_input, quarter_input, year_input)
+        self.analyzer.result_summary(country_input, type_input, audience_input, quarter_input, year_input)
                 
         print(filtered_result)
 
@@ -181,8 +182,7 @@ class UserInterface:
                 filters_input = input("Enter your choice (int) -> [country, type, audience, quarter, year]: ")
                 country_input, type_input, audience_input, quarter_input, year_input = self.split_input(filters_input)
 
-                filtered_result = self.analyzer.filtered_result(country_input, type_input, audience_input, quarter_input, year_input)
-                
+                filtered_result = self.analyzer.filtered_result(country_input, type_input, audience_input, quarter_input, year_input)                
                 print(filtered_result)
                 
                 self.analyzer.result_summary(country_input, type_input, audience_input, quarter_input, year_input)

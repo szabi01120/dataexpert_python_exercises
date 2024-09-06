@@ -148,7 +148,7 @@ def PlayerByWins():
     headers = ['Event', 'EarnedRank', 'RankScore']
     players_df = readPlayers()
     
-    playersPath = os.path.join(path, 'Players')
+    playersPath = os.path.join(path, 'Players') # ????? not working task find out
 
     if not os.path.isdir(playersPath):
         os.mkdir(playersPath)
@@ -159,8 +159,23 @@ def PlayerByWins():
     for player in playerSet:
         if not os.path.isdir(os.path.join(playersPath, player)):
             os.mkdir(os.path.join(playersPath, player))   
-        
-        
+            
+        currentPlayerPath = os.path.join(playersPath, player)
+        df_new = pd.DataFrame(columns=headers)
+        for path in os.listdir(eventPath):
+            df = pd.read_csv(os.path.join(eventPath, path, 'merged_event_data.csv'))
+            
+            for gameType in set(df['GameType']):
+                df_gameType = df[df['GameType'] == gameType]
+                df_player = df_gameType[df_gameType['Player'] == player]
+                
+                if not df_player.empty:
+                    df_player = df_player.sort_values(by='Rankscore', ascending=False)
+                    df_player = df_player.head(1)
+                    df_player['Event'] = path
+                    df_new = pd.concat([df_new, df_player])
+                
+        df_new.to_csv(os.path.join(currentPlayerPath, 'player.csv'), index=False)       
         
 def main():
     MergeAllTables()
