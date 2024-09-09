@@ -54,7 +54,7 @@ def playStoreListing():
     avg_rating = df[df['offers_iap'] == True]['score'].mean().round(3)
     print("\nAverage rating of apps that offer in-app purchases:", avg_rating)
     
-    #app with lowest rating
+    # app with lowest rating
     lowest_rating_name = df[df['score'] > 0].set_index('title')['score'].idxmin()
     lowest_rating = df[df['score'] > 0].set_index('title')['score'].min()
     print("\nLowest rating:", lowest_rating_name, "with", lowest_rating, "rating")
@@ -62,7 +62,15 @@ def playStoreListing():
     # star rating percentage comparison by genre
     star_ratings = df.groupby('genre')[['rating_one_star', 'rating_two_star', 'rating_three_star', 'rating_four_star', 'rating_five_star']].sum()
     star_ratings_percentage = star_ratings.div(star_ratings.sum(axis=1), axis=0).mul(100).round(2)
+    star_ratings_percentage.sort_values(by='rating_five_star', ascending=False, inplace=True)
+    
     print("\nStar rating percentage comparison by genre:\n", star_ratings_percentage.head(5))
+    
+    # ad count
+    ad_count = df[df['ad_supported'] == False].groupby('genre')['ad_supported'].count()
+    ad_count.sort_values(ascending=False, inplace=True)
+    print("\nGenres not having advertisements:")
+    print(ad_count.head(5).to_string(header=False))
 
 def main():
     etsyListing()

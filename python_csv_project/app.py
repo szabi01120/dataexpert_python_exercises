@@ -36,7 +36,7 @@ def ScoreTypes() -> dict:
             'RankingWeight': df_wormsar['RankingWeight']
         }
     }
-    print(ScoreTypes['Doom2dm']['RankingWeight'].abs().sum())
+    print("scoretypes:", ScoreTypes['Doom2dm']['RankingWeight'].abs().sum())
     return ScoreTypes
 
 def writeTopScores(df, headSize, players_df) -> pd.DataFrame:
@@ -58,10 +58,11 @@ def MergeAllTables():
     
     for root, _, files in os.walk(eventPath):
         for name in files:
-            with open(os.path.join(root, name), "r", encoding='utf-8') as file:
-                reader = pd.read_csv(file)
-                headers = reader.columns
-                data = pd.concat([data, reader])    
+            if name.startswith('Match'):
+                with open(os.path.join(root, name), "r", encoding='utf-8') as file:
+                    reader = pd.read_csv(file)
+                    headers = reader.columns
+                    data = pd.concat([data, reader])    
     df = pd.DataFrame(data, columns=headers)
     
     if os.path.isfile('merged_data.csv'):
@@ -143,12 +144,33 @@ def Top100_GameType():
         df_out['GameType'] = gameType
         
         df_out.to_csv(f'top100_{gameType}.csv', index=False)  
-        
-def PlayerByWins():
-    headers = ['Event', 'EarnedRank', 'RankScore']
-    players_df = readPlayers()
+
+def calculate_rank_score(row):
+    weights = {
+        'Participation': 1,  # Participation points
+        'Abort': -2,         # Penalty for aborting games
+        'Kills': 3,          # Points per kill
+        'Deaths': -1,        # Negative points for deaths
+        'Wins': 5,           # Points per win
+        'Combos': 4,         # Points per combo
+        'Frags': 2           # Points per frag
+    }
+
+    rank_score = (weights['Participation'] * row['Participation'] +
+                  weights['Abort'] * row['Abort'] +
+                  weights['Kills'] * row['Kills'] +
+                  weights['Deaths'] * row['Deaths'] +
+                  weights['Wins'] * row['Wins'] +
+                  weights['Combos'] * row['Combos'] +
+                  weights['Frags'] * row['Frags'])
     
-    playersPath = os.path.join(path, 'Players') # ????? not working task find out
+    return rank_score
+
+def PlayerByWins(path, eventPath):
+    headers = ['Event', 'EarnedRank', 'RankScore']
+    
+    playersPath = os.path.join(path, 'Players')
+    print(playersPath)
 
     if not os.path.isdir(playersPath):
         os.mkdir(playersPath)
@@ -157,34 +179,46 @@ def PlayerByWins():
     print(len(playerSet))
     
     for player in playerSet:
-        if not os.path.isdir(os.path.join(playersPath, player)):
-            os.mkdir(os.path.join(playersPath, player))   
+        playerDir = os.path.join(playersPath, player)
+        
+        if not os.path.isdir(playerDir):
+            os.mkdir(playerDir)
             
-        currentPlayerPath = os.path.join(playersPath, player)
         df_new = pd.DataFrame(columns=headers)
-        for path in os.listdir(eventPath):
-            df = pd.read_csv(os.path.join(eventPath, path, 'merged_event_data.csv'))
+        
+        for event in os.listdir(eventPath):
+            eventFilePath = os.path.join(eventPath, event, 'merged_event_data.csv')
+            df = pd.read_csv(eventFilePath)
             
             for gameType in set(df['GameType']):
                 df_gameType = df[df['GameType'] == gameType]
                 df_player = df_gameType[df_gameType['Player'] == player]
                 
                 if not df_player.empty:
-                    df_player = df_player.sort_values(by='Rankscore', ascending=False)
-                    df_player = df_player.head(1)
-                    df_player['Event'] = path
-                    df_new = pd.concat([df_new, df_player])
-                
-        df_new.to_csv(os.path.join(currentPlayerPath, 'player.csv'), index=False)       
+                    # RankScore kiszámítása az apply függvény használatával, loc indexeléssel a hibák elkerülése érdekében
+                    df_gameType.loc[:, 'RankScore'] = df_gameType.apply(calculate_rank_score, axis=1)
+                    
+                    # Rendezés a RankScore alapján és EarnedRank hozzáadása
+                    df_gameType = df_gameType.sort_values(by='Wins', ascending=False).reset_index(drop=True)
+                    df_gameType['EarnedRank'] = df_gameType.index + 1
+                    
+                    # Az aktuális játékos legjobb eredményének kiválasztása és az esemény nevének beállítása
+                    df_player = df_gameType[df_gameType['Player'] == player].head(1)
+                    df_player['Event'] = event  # Az esemény nevének beállítása
         
+                    df_new = pd.concat([df_new, df_player])
+        
+        df_new.to_csv(os.path.join(playerDir, 'player.csv'), index=False)
+
 def main():
     MergeAllTables()
     MergeEventTables()
+    
     Top100()
     Top10ByEvent()    
     Top10ByEvent_GameType()
     Top100_GameType()
-    PlayerByWins()
+    PlayerByWins(path, eventPath)
     ScoreTypes()
     
 if __name__ == "__main__":
