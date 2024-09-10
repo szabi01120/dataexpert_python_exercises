@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import os
-
+from concurrent.futures import ThreadPoolExecutor
 import config
 
 class DataLoader:
@@ -26,6 +26,7 @@ class DataLoader:
                 'RankingWeight': df['RankingWeight']
             }
         return score_types
+
 
 class ScoreManager:
     @staticmethod
@@ -64,6 +65,7 @@ class ScoreManager:
         df_out['Name'] = df_out['Nick'].map(players_df.set_index('Nick')['Name'])
         return df_out
 
+
 class EventManager:
     def __init__(self, data_loader):
         self.event_path = data_loader.event_path
@@ -77,84 +79,107 @@ class EventManager:
                 if name.startswith('Match'):
                     df = pd.read_csv(os.path.join(root, name))
                     headers = df.columns
-                    data = pd.concat([data, df])
+                    data = pd.concat([data, df], ignore_index=True)  # Optimalizált concat
         df = pd.DataFrame(data, columns=headers)
-        if not os.path.isfile('merged_data.csv'):
-            df.to_csv('merged_data.csv', index=False)
-        else:
-            print('File already exists')
-
+        
+        if not os.path.exists('merged_data.csv'):
+            df.to_csv('merged_data.csv', index=False)  # A fájl felülírható, nem kell ellenőrizni
+        
     def merge_event_tables(self):
-        for path in os.listdir(self.event_path):
-            for root, _, files in os.walk(os.path.join(self.event_path, path)):
-                data = pd.DataFrame()
-                for name in files:
-                    if name.startswith('Match'):
-                        df = pd.read_csv(os.path.join(root, name))
-                        data = pd.concat([data, df])
-                df = pd.DataFrame(data, columns=df.columns)
-                output_path = os.path.join(self.event_path, path, 'merged_event_data.csv')
-                if not os.path.isfile(output_path):
-                    df.to_csv(output_path, index=False)
+        def merge_single_event(event_dir_path, event_name):
+            data = pd.DataFrame()
+            for match_file in os.listdir(event_dir_path):
+                if match_file.startswith('Match'):
+                    match_df = pd.read_csv(os.path.join(event_dir_path, match_file))
+                    data = pd.concat([data, match_df], ignore_index=True)  # Optimalizált concat
+            df = pd.DataFrame(data, columns=data.columns)
+            
+            event_data_path = os.path.join(self.event_path, event_name, 'merged_event_data.csv')
+            if not os.path.exists(event_data_path):           
+                df.to_csv(event_data_path, index=False)
 
-    def top_n_by_event(self, head_size=10, output_path=None): # alap 10, kezeli a top100-at is
+        with ThreadPoolExecutor() as executor:
+            for path in os.listdir(self.event_path):
+                event_dir_path = os.path.join(self.event_path, path)
+                executor.submit(merge_single_event, event_dir_path, path)  # Párhuzamos feldolgozás
+
+    def top_n_by_event(self, head_size=10, output_path=None):
         players_df = self.data_loader.read_players()
         score_manager = ScoreManager()
 
         if head_size == 100:
-            # Merged data beolvasása és a top 100 játékos meghatározása
             df = pd.read_csv('merged_data.csv')
             df_out = score_manager.write_top_scores(df, head_size, players_df)
-            
-            # Ha nincs megadva output_path, az alapértelmezett a főmappa
             output_path = output_path or 'top100.csv'
-            df_out.to_csv(output_path, index=False)
+            
+            if not os.path.exists(output_path):
+                df_out.to_csv(output_path, index=False)
         else:
-            # Eseményenkénti top 10 rangsor
-            for path in os.listdir(self.event_path):
-                df = pd.read_csv(os.path.join(self.event_path, path, 'merged_event_data.csv'))
+            def process_event(event_name):
+                df = pd.read_csv(os.path.join(self.event_path, event_name, 'merged_event_data.csv'))
                 df_out = score_manager.write_top_scores(df, head_size, players_df)
-                df_out.to_csv(os.path.join(self.event_path, path, f'top{head_size}.csv'), index=False)
+                
+                top_n_path = os.path.join(self.event_path, event_name, f'top{head_size}.csv')
+                
+                if not os.path.exists(top_n_path):
+                    df_out.to_csv(top_n_path, index=False)
+
+            with ThreadPoolExecutor() as executor:
+                for path in os.listdir(self.event_path):
+                    executor.submit(process_event, path)  # Párhuzamos feldolgozás
 
     def top_n_by_event_game_type(self, head_size=10):
         players_df = self.data_loader.read_players()
         score_manager = ScoreManager()
         game_types = set(pd.read_csv(os.path.join(self.data_loader.base_dir, 'Games.csv'))['Id'])
-        for path in os.listdir(self.event_path):
-            df = pd.read_csv(os.path.join(self.event_path, path, 'merged_event_data.csv'))
+
+        def process_event_game_type(event_name):
+            df = pd.read_csv(os.path.join(self.event_path, event_name, 'merged_event_data.csv'))
             for game_type in game_types:
                 df_filtered = df[df['GameType'] == game_type]
                 df_out = score_manager.write_top_scores(df_filtered, head_size, players_df)
-                df_out.to_csv(os.path.join(self.event_path, path, f'top{head_size}_{game_type}.csv'), index=False)
+                
+                top_n_gametype = os.path.join(self.event_path, event_name, f'top{head_size}_{game_type}.csv')
+                
+                if not os.path.exists(top_n_gametype):
+                    df_out.to_csv(top_n_gametype, index=False)
 
-    def player_by_wins(self, players_dir):
-        headers = ['Event', 'EarnedRank', 'RankScore']  # Csak a szükséges oszlopok
-        player_set = set(pd.read_csv('Top100.csv')['Nick'])  # Top100 játékos beolvasása
+        with ThreadPoolExecutor() as executor:
+            for path in os.listdir(self.event_path):
+                executor.submit(process_event_game_type, path)  # Párhuzamos feldolgozás
 
-        for player in player_set:
+    def player_by_wins_game_type(self, players_dir):
+        headers = ['Event', 'EarnedRank', 'RankScore']
+        merged_df = pd.read_csv('merged_data.csv')  # merged_data.csv egyszer olvasva
+
+        player_set = set(pd.read_csv('Top100.csv')['Nick'])  # Top100 játékosok egyszer olvasva
+
+        def process_player_game_type(player):
             player_dir = os.path.join(players_dir, player)
             os.makedirs(player_dir, exist_ok=True)
+            unique_game_types = merged_df['GameType'].unique()
 
-            player_data = []
+            for game_type in unique_game_types:
+                player_data = []
+                for event in os.listdir(self.event_path):
+                    event_dir_path = os.path.join(self.event_path, event)
+                    all_matches_df = pd.DataFrame()
 
-            for event in os.listdir(self.event_path):  # Eventek bejárása
-                event_dir_path = os.path.join(self.event_path, event)
-                all_matches_df = pd.DataFrame()
+                    for match_file in os.listdir(event_dir_path):
+                        if match_file.startswith('Match_'):
+                            match_df = pd.read_csv(os.path.join(event_dir_path, match_file))
+                            all_matches_df = pd.concat([all_matches_df, match_df], ignore_index=True)
 
-                for match_file in os.listdir(event_dir_path):  # Meccsek bejárása
-                    if match_file.startswith('Match_') and match_file.endswith('.csv'):
-                        match_df = pd.read_csv(os.path.join(event_dir_path, match_file))
-                        all_matches_df = pd.concat([all_matches_df, match_df])
-
-                for game_type in set(all_matches_df['GameType']):  # Játéktípusok bejárása
-                    df_game_type = all_matches_df[all_matches_df['GameType'] == game_type].copy()  # .copy() a SettingWithCopyWarning elkerülésére
+                    df_game_type = all_matches_df[all_matches_df['GameType'] == game_type]
                     df_player = df_game_type[df_game_type['Player'] == player]
 
                     if not df_player.empty:
-                        df_game_type.loc[:, 'RankScore'] = df_game_type.apply(ScoreManager.calculate_rank_score, axis=1)
-                        df_game_type = df_game_type.sort_values(by='RankScore', ascending=False).reset_index(drop=True)
-                        df_game_type.loc[:, 'EarnedRank'] = df_game_type.index + 1
+                        # Készítsünk mély másolatot, hogy elkerüljük a SettingWithCopyWarning-ot
+                        df_game_type = df_game_type.copy(deep=True)
+                        df_game_type['RankScore'] = df_game_type.apply(ScoreManager.calculate_rank_score, axis=1)
 
+                        df_game_type = df_game_type.sort_values(by='RankScore', ascending=False).reset_index(drop=True)
+                        df_game_type['EarnedRank'] = df_game_type.index + 1
                         top_player_row = df_game_type[df_game_type['Player'] == player].head(1)
 
                         player_data.append({
@@ -163,14 +188,18 @@ class EventManager:
                             'RankScore': top_player_row['RankScore'].values[0]
                         })
 
-            # dict -> DataFrame -> CSV
-            if player_data:
-                df_new = pd.DataFrame(player_data, columns=headers)
-                df_new = df_new.sort_values(by='EarnedRank', ascending=True).head(10)  # Csak az első 10
-                csv_path = os.path.join(player_dir, 'top10.csv')
+                if player_data:
+                    df_new = pd.DataFrame(player_data, columns=headers)
+                    df_new = df_new.sort_values(by='EarnedRank', ascending=True).head(10)
+                    csv_path = os.path.join(player_dir, f'top10_{game_type}.csv')
+                    
+                    if not os.path.exists(csv_path):
+                        df_new.to_csv(csv_path, index=False)
 
-                if not os.path.isfile(csv_path):
-                    df_new.to_csv(csv_path, index=False)
+        # Párhuzamos feldolgozás ThreadPoolExecutorral
+        with ThreadPoolExecutor() as executor:
+            for player in player_set:
+                executor.submit(process_player_game_type, player)
 
 
 def main():
@@ -180,17 +209,11 @@ def main():
     event_manager.merge_all_tables()
     event_manager.merge_event_tables()
 
-    # Top 100 
     event_manager.top_n_by_event(100, output_path='top100.csv')
-
-    # Top 10 event
     event_manager.top_n_by_event(10)
-
-    # Top 10 event game type
     event_manager.top_n_by_event_game_type(10)
 
-    # Játékosok nyerési rangsora
-    event_manager.player_by_wins(os.path.join(config.baseDir, 'Players'))
+    event_manager.player_by_wins_game_type(os.path.join(config.baseDir, 'Players'))
 
 if __name__ == "__main__":
     main()
