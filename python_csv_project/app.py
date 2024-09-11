@@ -10,13 +10,13 @@ class DataLoader:
         self.data_dir = os.path.join(base_dir, data_dir_name)
         self.event_path = os.path.join(self.data_dir, 'Deb2010')
         self.scoring_path = os.path.join(base_dir, 'Scoring')
-
+        
     def read_players(self) -> pd.DataFrame:
-        return pd.read_csv(os.path.join(self.base_dir, 'Players.csv'))
+        return pd.read_csv('Players.csv')
 
     def read_games(self) -> pd.DataFrame:
-        return pd.read_csv(os.path.join(self.base_dir, 'Games.csv'))
-
+        return pd.read_csv('Games.csv')
+    
     def read_score_types(self) -> dict:
         score_types = {}
         for game in ['Doom2dm', 'SnL', 'WormsAr']:
@@ -26,7 +26,6 @@ class DataLoader:
                 'RankingWeight': df['RankingWeight']
             }
         return score_types
-
 
 class ScoreManager:
     @staticmethod
@@ -54,11 +53,11 @@ class ScoreManager:
 
     def write_top_scores(self, df, head_size, players_df) -> pd.DataFrame:
         headers = ['Rank', 'Rankscore', 'Nick', 'Name']
+        score_manager = ScoreManager()
+        
         df_out = pd.DataFrame(columns=headers)
-        df_out['Rankscore'] = (
-            df['Participation'] + df['Abort'] + df['Kills'] - df['Deaths'] +
-            df['Wins'] + df['Combos']
-        )
+        df_out['Rankscore'] = (score_manager.calculate_rank_score(df))
+        
         df_out = df_out.sort_values(by='Rankscore', ascending=False).head(head_size)
         df_out['Rank'] = np.arange(1, head_size + 1, 1)
         df_out['Nick'] = df['Player']
@@ -84,6 +83,7 @@ class EventManager:
         
         if not os.path.exists('merged_data.csv'):
             df.to_csv('merged_data.csv', index=False)  # A fájl felülírható, nem kell ellenőrizni
+        return df
         
     def merge_event_tables(self):
         def merge_single_event(event_dir_path, event_name):
@@ -97,19 +97,20 @@ class EventManager:
             event_data_path = os.path.join(self.event_path, event_name, 'merged_event_data.csv')
             if not os.path.exists(event_data_path):           
                 df.to_csv(event_data_path, index=False)
+                print("seggdf:", df)
+                return df
 
         with ThreadPoolExecutor() as executor:
             for path in os.listdir(self.event_path):
                 event_dir_path = os.path.join(self.event_path, path)
                 executor.submit(merge_single_event, event_dir_path, path)  # Párhuzamos feldolgozás
 
-    def top_n_by_event(self, head_size=10, output_path=None):
+    def top_n_by_event(self, merged_data_df, head_size=10, output_path=None):
         players_df = self.data_loader.read_players()
         score_manager = ScoreManager()
 
         if head_size == 100:
-            df = pd.read_csv('merged_data.csv')
-            df_out = score_manager.write_top_scores(df, head_size, players_df)
+            df_out = score_manager.write_top_scores(merged_data_df, head_size, players_df)
             output_path = output_path or 'top100.csv'
             
             if not os.path.exists(output_path):
@@ -123,6 +124,7 @@ class EventManager:
                 
                 if not os.path.exists(top_n_path):
                     df_out.to_csv(top_n_path, index=False)
+                    print("lefut top10")
 
             with ThreadPoolExecutor() as executor:
                 for path in os.listdir(self.event_path):
@@ -148,16 +150,19 @@ class EventManager:
             for path in os.listdir(self.event_path):
                 executor.submit(process_event_game_type, path)  # Párhuzamos feldolgozás
 
-    def player_by_wins_game_type(self, players_dir):
+    def player_top_ten_data(self, players_dir):
         headers = ['Event', 'EarnedRank', 'RankScore']
-        merged_df = pd.read_csv('merged_data.csv')  # merged_data.csv egyszer olvasva
 
-        player_set = set(pd.read_csv('Top100.csv')['Nick'])  # Top100 játékosok egyszer olvasva
+        player_set = set(pd.read_csv('Top100.csv')['Nick'])  # Top100 nevek
+
+        overall_player_data = []  # Összesített adatok lista
 
         def process_player_game_type(player):
-            player_dir = os.path.join(players_dir, player)
             os.makedirs(player_dir, exist_ok=True)
-            unique_game_types = merged_df['GameType'].unique()
+            player_dir = os.path.join(players_dir, player)
+
+            unique_game_types = self.data_loader.read_games()['Id'].tolist()
+            print("unique_game_types:", unique_game_types)
 
             for game_type in unique_game_types:
                 player_data = []
@@ -174,7 +179,7 @@ class EventManager:
                     df_player = df_game_type[df_game_type['Player'] == player]
 
                     if not df_player.empty:
-                        # Készítsünk mély másolatot, hogy elkerüljük a SettingWithCopyWarning-ot
+                        # deep copy
                         df_game_type = df_game_type.copy(deep=True)
                         df_game_type['RankScore'] = df_game_type.apply(ScoreManager.calculate_rank_score, axis=1)
 
@@ -182,17 +187,20 @@ class EventManager:
                         df_game_type['EarnedRank'] = df_game_type.index + 1
                         top_player_row = df_game_type[df_game_type['Player'] == player].head(1)
 
-                        player_data.append({
+                        player_event_data = {
                             'Event': event,
                             'EarnedRank': top_player_row['EarnedRank'].values[0],
                             'RankScore': top_player_row['RankScore'].values[0]
-                        })
+                        }
+
+                        player_data.append(player_event_data)
+                        overall_player_data.append(player_event_data)  # Összesített adatok lista
 
                 if player_data:
                     df_new = pd.DataFrame(player_data, columns=headers)
                     df_new = df_new.sort_values(by='EarnedRank', ascending=True).head(10)
                     csv_path = os.path.join(player_dir, f'top10_{game_type}.csv')
-                    
+
                     if not os.path.exists(csv_path):
                         df_new.to_csv(csv_path, index=False)
 
@@ -201,19 +209,32 @@ class EventManager:
             for player in player_set:
                 executor.submit(process_player_game_type, player)
 
+        # Összesített top10.csv player mappákba (külső függvényben)
+        if overall_player_data:
+            df_overall = pd.DataFrame(overall_player_data, columns=headers)
+            df_overall = df_overall.sort_values(by='EarnedRank', ascending=True).head(10)
+            overall_csv_path = os.path.join(players_dir, 'top10.csv')
+
+            if not os.path.exists(overall_csv_path):
+                df_overall.to_csv(overall_csv_path, index=False)
+
+def player_by_event(self, players_dir):
+    headers = ['Event', 'GameType', 'MatchId', 'ScoreType', 'Score']
+        
+
 
 def main():
     data_loader = DataLoader(config.baseDir, config.dataDirName)
     event_manager = EventManager(data_loader)
-
-    event_manager.merge_all_tables()
+    merged_df = event_manager.merge_all_tables()
+    
     event_manager.merge_event_tables()
 
-    event_manager.top_n_by_event(100, output_path='top100.csv')
-    event_manager.top_n_by_event(10)
+    event_manager.top_n_by_event(merged_df, 100, output_path='top100.csv')
+    event_manager.top_n_by_event(merged_df, 10)
     event_manager.top_n_by_event_game_type(10)
 
-    event_manager.player_by_wins_game_type(os.path.join(config.baseDir, 'Players'))
+    event_manager.player_top_ten_data(os.path.join(config.baseDir, 'Players'))
 
 if __name__ == "__main__":
     main()
