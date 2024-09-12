@@ -96,7 +96,6 @@ class EventManager:
             event_data_path = os.path.join(self.event_path, event_name, 'merged_event_data.csv')
             if not os.path.exists(event_data_path):           
                 df.to_csv(event_data_path, index=False)
-                print("seggdf:", df)
                 return df
 
         with ThreadPoolExecutor() as executor:
@@ -158,7 +157,6 @@ class EventManager:
                 os.makedirs(player_dir, exist_ok=True)
                 
                 unique_game_types = self.data_loader.read_games()['Id'].tolist()
-                print("unique_game_types:", unique_game_types)
 
                 overall_player_data = []  # Az összesített adatok lista
 
@@ -221,35 +219,56 @@ class EventManager:
         headers = ['Event', 'GameType', 'MatchId', 'ScoreType', 'Score']
         player_set = set(pd.read_csv('Players.csv')['Nick'])  # Top100 nevek
         
+        # Párhuzamos feldolgozáshoz ThreadPoolExecutor
+        with ThreadPoolExecutor() as executor:
+            futures = [executor.submit(self.process_player_events, player, headers) for player in player_set]
+            
+            for future in futures:
+                future.result()  # Várjuk meg a feldolgozást minden játékosra
+            
+    def process_player_events(self, player, headers):
+        os.makedirs(os.path.join(config.baseDir, 'Players', player), exist_ok=True)
+        output_df = pd.DataFrame(columns=headers)
         
-        for player in player_set:
-            os.makedirs(os.path.join(config.baseDir, 'Players', player), exist_ok=True)
-            output_df = pd.DataFrame(columns=headers)
-            
-            player_data_df = pd.DataFrame()
-            
-            for event in os.listdir(self.event_path):
-                print("event ciklus: ", event)
-                for match in os.listdir(os.path.join(self.event_path, event)):
-                    if match.startswith('Match_'):
-                        print("match path: ", os.path.join(self.event_path, event, match))
-                        match_df = pd.read_csv(os.path.join(self.event_path, event, match))
-                        match_df['Event'] = event
-                        match_df['MatchId'] = match
+        for event in os.listdir(self.event_path):
+            for match in os.listdir(os.path.join(self.event_path, event)):
+                if match.startswith('Match_'):
+                    match_df = pd.read_csv(os.path.join(self.event_path, event, match))
+                    match_df['Event'] = event
+                    match_df['MatchId'] = match.split('.')[0]
+                    
+                    player_data_df = match_df[match_df['Player'] == player].copy()
+                    
+                    if not player_data_df.empty:
+                        player_data_df.loc[:, 'ScoreType'] = "SUM"
+                        player_data_df.loc[:, 'Score'] = player_data_df.apply(ScoreManager.calculate_rank_score, axis=1)
                         
-                        player_data_df = match_df[match_df['Player'] == player].copy()
+                        player_data_df = player_data_df[['Event', 'GameType', 'MatchId', 'ScoreType', 'Score']]
                         
-                        if not player_data_df.empty:
-                            player_data_df.loc[:, 'ScoreType'] = "SUM"
-                            player_data_df.loc[:, 'Score'] = player_data_df.apply(ScoreManager.calculate_rank_score, axis=1)
-                            
-                            player_data_df = player_data_df[['Event', 'GameType', 'MatchId', 'ScoreType', 'Score']]
-                            
-                            output_df = pd.concat([output_df, player_data_df], ignore_index=True)
-                            print("player_data_df:\n", player_data_df)
-                            
-            print("output_df:\n", output_df)
-            output_df.to_csv(os.path.join(config.baseDir, 'Players', player, 'player_data.csv'), index=False)
+                        output_df = pd.concat([output_df, player_data_df], ignore_index=True)
+        
+        print(f"output_df for {player}:\n", output_df)
+        output_df.to_csv(os.path.join(config.baseDir, 'Players', player, 'Deb2010.csv'), index=False)
+
+        self.player_top_scores(output_df, player) # top 100 scores 
+
+    def player_top_scores(self, output_df, player):
+        headers = ['Score', 'ScoreType', 'GameType', 'Event']
+        top_score_df = pd.DataFrame(columns=headers)
+
+        def get_top_scores():
+            output_df['Score'] = pd.to_numeric(output_df['Score'], errors='coerce') # coerce -> NaN ha nem jó az input
+            return output_df.nlargest(100, 'Score')
+        
+        # top100 score to top_score_df
+        top_scores = get_top_scores()
+        top_score_df = pd.concat([top_score_df, top_scores[['Score', 'ScoreType', 'GameType', 'Event']]], ignore_index=True)
+        
+        top_scores_path = os.path.join(config.baseDir, 'Players', player, 'top100_scores.csv')
+        top_score_df.to_csv(top_scores_path, index=False)
+        
+        print(f"Top 100 scores for {player} written to {top_scores_path}\n{top_score_df}")
+            
             
 def main():
     data_loader = DataLoader(config.baseDir, config.dataDirName)
@@ -258,11 +277,11 @@ def main():
     
     event_manager.merge_event_tables()
 
-    event_manager.top_n_by_event(merged_df, 100, output_path='top100.csv')
-    event_manager.top_n_by_event(merged_df, 10)
-    event_manager.top_n_by_event_game_type(10)
+    # event_manager.top_n_by_event(merged_df, 100, output_path='top100.csv')
+    # event_manager.top_n_by_event(merged_df, 10)
+    # event_manager.top_n_by_event_game_type(10)
 
-    event_manager.player_top_ten_data(os.path.join(config.baseDir, 'Players'))
+    # event_manager.player_top_ten_data(os.path.join(config.baseDir, 'Players'))
     
     event_manager.player_by_event()
 
