@@ -14,6 +14,10 @@ class DataLoader:
         
     # Töltsük be cache-elve az adatokat
     @lru_cache(maxsize=None)
+    def read_scoring(self) -> pd.DataFrame:
+        return pd.read_csv('Scoring/Doom2dm.csv')
+    
+    @lru_cache(maxsize=None)
     def read_players(self) -> pd.DataFrame:
         return pd.read_csv('Players.csv')
 
@@ -32,18 +36,14 @@ class DataLoader:
             }
         return score_types
 
-class ScoreManager:
+class ScoreManager:        
     @staticmethod
     def calculate_rank_score(df):
-        weights = {
-            'Participation': 1,
-            'Abort': -2,
-            'Kills': 3,
-            'Deaths': -1,
-            'Wins': 5,
-            'Combos': 4,
-            'Frags': 2
-        }
+        data_loader = DataLoader(config.baseDir, config.dataDirName)
+        
+        weights_df = data_loader.read_scoring()
+        
+        weights = dict(zip(weights_df['ScoreType'], weights_df['RankingWeight']))
 
         rank_score = (
             weights['Participation'] * df['Participation'] +
@@ -54,6 +54,7 @@ class ScoreManager:
             weights['Combos'] * df['Combos'] +
             weights['Frags'] * df['Frags']
         )
+        
         return rank_score
 
     def write_top_scores(self, df, head_size, players_df) -> pd.DataFrame:
@@ -274,8 +275,8 @@ class EventManager:
 def main():
     data_loader = DataLoader(config.baseDir, config.dataDirName)
     event_manager = EventManager(data_loader)
-    merged_df = event_manager.merge_all_tables()
     
+    merged_df = event_manager.merge_all_tables()
     event_manager.merge_event_tables()
 
     event_manager.top_n_by_event(merged_df, 100, output_path='top100.csv')
